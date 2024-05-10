@@ -1,0 +1,132 @@
+.containteRdv{
+    @include taille (100%,900px);
+    @include flexbox (flex,column,center);
+    .boxErr{
+        @include taille(400px,80px);
+        background-color: #00b679b0;
+        @include position(absolute,1%,32%);
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        h1{
+            font-size: 1.5em;
+            font-family: sans-serif;
+        }
+        animation: transy 1s ease;
+        @keyframes transy {
+            // 0%{transform: translateX(100%);}
+            // 100%{transform: translateX(0%);}
+            0%{opacity:0;};
+            100%{opacity:1;};
+
+        }
+        &.back{
+            // transform: translateX(100%);
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    }
+    .titleRdv{
+        @include taille (95%,100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border-top: solid 3px rgb(18, 162, 245);
+    }
+    .contenuRdv{
+        @include taille (95%,700px);
+        @include flexbox(flex,row,flex-start);
+        flex-wrap: wrap;
+         border-top: solid 2px gray;
+         overflow: scroll;
+         scrollbar-width: none;
+
+         .boxRdv{
+            @include taille (45%,300px);
+            box-shadow: 0 0 11px 0 ;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 20px;
+            .headboxRdv{
+                @include taille (100%,40%);
+                background-color: rgb(136, 236, 209);
+                @include flexbox (flex,row,space-evenly);
+                .pdpRdv{
+                    @include taille (110px,110px);
+                    overflow: hidden;
+                    border-radius: 100px;
+                    box-shadow: 0 0 11px 0 rgb(152, 152, 152);
+                    img{
+                        @include taille (100%,100%);
+                    }
+                }
+                .detailPatient{
+                    @include taille (60%,100%);
+                    h1{
+                        font-size: 1.4em;
+                        color: rgb(59, 59, 59);
+                        span{
+                            font-size: 0.8em;
+                        }
+                    }
+                    h2{
+                        font-size: 1.2em;
+                        color: rgb(59, 59, 59);
+                    }
+                }
+
+            }
+            .headetail{
+                @include taille (100%,30%);
+                @include flexbox (flex,row,space-evenly);
+                padding: 0 20px;
+                h4{
+                    font-size: 1.5em;
+
+                    span{
+                        color: rgb(67, 67, 67);
+                        font-style: italic;
+                        border-bottom: solid 1px gray;
+                    }
+                }
+                i{
+                    font-size: 4em;
+                    color: rgb(4, 240, 161);
+                }
+            }
+            .headValid{
+                @include taille (100%,30%);
+                @include flexbox (flex,row,center);
+                input{
+                    @include taille (30%,50%);
+                    margin-right: 8px;
+                    margin-left: 2px;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px rgb(145, 143, 143);
+                    background: transparent;
+                    &:hover{
+                        border-bottom: solid 2px #0098fd;
+                        transition: 0.5s
+                    }
+                }
+                button{
+                    @include taille (100px,50px);
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #0098fd;
+                    font-size: 1em;
+                    &:hover{
+                        background-color: #5ab7f4;
+                        transition: 0.5s
+                    }
+                }
+            }
+         }
+    }
+}

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: james;
+    src: url(../font/James\ Stroker.ttf);
+}
+header{
+    @include taille (100%,70px);
+    background-color: #3c8dbc;
+    @include position (absolute,0,0);
+    @include flexbox (flex,row,space-between);
+    .headbbb{
+        @include taille (20%,100%);
+        // #{$bg}:#327ba5;
+        position: absolute;
+        display: flex;
+        align-items:center;
+        justify-content:center ;
+
+        a{
+            text-decoration: none;
+            font-family: james;
+            font-size: 2.7em;
+            color: antiquewhite;
+            font-weight: bold;
+        }
+    }
+    .headTwo{
+        @include taille (25%,100%);
+        @include flexbox (flex,row,center);
+        .Adpro{
+            @include taille (40px,40px);
+            border-radius: 100px;
+            overflow: hidden;
+            img{
+                #{$w}:100%;
+            }
+        }
+        h1{
+            #{$fz}:1.2em;
+            color: white;
+            font-family: sans-serif;
+            margin: 0 20px 0 20px;
+        }
+        a{
+            #{$fz}:1.5em;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    }
+    .fa-house{
+        #{$fz}:1.5em;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        @include position(absolute,30%,24%);
+    }
+}

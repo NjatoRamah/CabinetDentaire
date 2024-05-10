@@ -1,0 +1,180 @@
+.sectRndv{
+    @include taille (100%,600px);
+    #{$bgcol}:rgb(253, 253, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .afferror{
+        @include taille (300px,60px);
+        background-color: rgba(0, 255, 0, 0.395);
+        @include position(absolute,25%,80%);
+        @include flexbox(flex,column,center);
+        border-radius: 5px;
+        cursor: pointer;
+        animation: transy 1s ease;
+        z-index: 1;
+        @keyframes transy {
+            // 0%{transform: translateX(100%);}
+            // 100%{transform: translateX(0%);}
+            0%{opacity:0;};
+            100%{opacity:1;};
+
+        }
+        p{
+            font-size: 1em;
+            font-family: sans-serif;
+        }
+        &.back{
+            // transform: translateX(100%);
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    }
+    .formulaire{
+        @include taille (60%,80%);
+        @include flexbox (flex,row,center);
+        box-shadow: 0 0 20px 0 gray;
+        border-radius: 5px;
+        .formImg{
+            @include taille (40%,100%);
+            overflow: hidden;
+            img{
+                #{$w}:100%;
+
+            }
+        }
+         form{
+            @include taille (60%,100%);
+            @include flexbox(flex,column,space-evenly);
+            align-items: flex-start;
+            backdrop-filter: blur(5px);
+            .tlt{
+                @include taille (60%,10%);
+                display: flex;
+                align-items: center;
+                h1{
+                    font-family: sans-serif;
+                    color: rgb(21, 21, 53)
+                }
+            }
+            .inputForm{
+                @include taille (100%,25%);
+                @include flexbox(flex,row,baseline);
+                align-items: flex-start;
+                flex-wrap: wrap;
+                input{
+                    @include taille (31%,35%);
+                    margin-right: 8px;
+                    margin-left: 2px;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px rgb(145, 143, 143);
+                    background: transparent;
+                    &:hover{
+                        border-bottom: solid 2px #0098fd;
+                        transition: 0.5s
+                    }
+                }
+                select{
+                    @include taille (31%,35%);
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px rgb(145, 143, 143);
+                    background: transparent;
+                    &:hover{
+                        border-bottom: solid 2px #0098fd;
+                        transition: 0.5s
+                    }
+                }
+            }
+            .boutton{
+                @include taille (100%,20%);
+                display: flex;
+                align-items: center;
+                button{
+                    @include taille (30%,55%);
+                    border-radius: 5px;
+                    border: none;
+                    background: #0463FA;
+                }
+            }
+
+         }
+
+    }
+}
+
+// ecran 900 px
+@media screen and (max-width:901px) {
+    .sectRndv{
+        @include taille (100%,600px);
+        #{$bgcol}:rgb(253, 253, 253);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .formulaire{
+            @include taille (60%,80%);
+            @include flexbox (flex,row,center);
+            box-shadow: 0 0 20px 0 gray;
+            border-radius: 5px;
+            .formImg{
+                display: none;
+                @include taille (40%,100%);
+                overflow: hidden;
+                img{
+                    #{$w}:100%;
+
+                }
+            }
+             form{
+                @include taille (96%,100%);
+                @include flexbox(flex,column,space-evenly);
+                align-items:center;
+                backdrop-filter: blur(5px);
+                .tlt{
+                    @include taille (60%,10%);
+                    display: flex;
+                    align-items: center;
+                    h1{
+                        font-family: sans-serif;
+                        color: rgb(21, 21, 53)
+                    }
+                }
+                .inputForm{
+                    @include taille (100%,25%);
+                    @include flexbox(flex,row,baseline);
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    input{
+                        @include taille (31%,35%);
+                        margin-right: 8px;
+                        margin-left: 2px;
+                        border: none;
+                        outline: none;
+                        border-bottom: solid 2px rgb(145, 143, 143);
+                        background: transparent;
+                        &:hover{
+                            border-bottom: solid 2px #0098fd;
+                            transition: 0.5s
+                        }
+                    }
+                }
+                .boutton{
+                    @include taille (100%,20%);
+                    display: flex;
+                    align-items: center;
+                    button{
+                        @include taille (30%,55%);
+                        border-radius: 5px;
+                        border: none;
+                        background: #0463FA;
+                    }
+                }
+               
+
+             }
+
+        }
+    }
+}

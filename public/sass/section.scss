@@ -1,0 +1,329 @@
+// premiere section
+.sectionOne{
+    @include tailleSection;
+    #{$bg}:url(../img/sectionOne.jpg) #0462fae9;
+    @include background(top center);
+    border-radius: 0px 0px 260px 0px;
+    box-shadow: 0px 11px 50px 1px rgb(101, 101, 101);
+    #{$dp}:flex;
+    position: relative;
+    overflow: hidden;
+    .slogan{
+        @include taille(35%,35%);
+        @include position(absolute,14%,11%);
+        #{$dp}:flex;
+        animation: trans 2s ease;
+        h1{
+            #{$fz}:55px;
+            #{$col}:white;
+            font-family: sans-serif;
+            padding-top: 6%;
+        }
+        @keyframes trans {
+            0%{transform: translateX(200%);}
+            100%{transform: translateX(0%);}
+
+        }
+    }
+    .pub{
+        @include taille(35%,10%);
+        @include position(absolute,52%,11%);
+        #{$dp}:flex;
+        .pubDate{
+            @include taille(50%,100%);
+            @include flexbox(flex,row,center);
+            animation: trans 2s ease;
+            @keyframes trans {
+                0%{transform: translateX(200%);}
+                100%{transform: translateX(0%);}
+            }
+            i{
+                color:#ebebeb;
+                #{$fz}:15pt;
+                margin-right: 10px;;
+
+            }
+            h1{
+                #{$fz}:12pt;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(238, 238, 238);
+
+            }
+        }
+    }
+    .desc{
+        @include taille(35%,35%);
+        @include position(absolute,61%,11%);
+        @include flexbox(flex,column,space-evenly);
+        animation: mont 2s ease;
+        @keyframes mont {
+            0%{transform: translateY(200%);}
+            100%{transform: translateY(0%);}
+        }
+        h1{
+            #{$fz}:15px;
+            #{$col}:white;
+            font-family: sans-serif;
+        }
+        .btn-1{
+            @include taille(30%,25%);
+            @include flexbox(flex,row,center);
+            text-decoration: none;
+            #{$col}:rgb(16, 105, 239);
+            #{$bgcol}:rgb(239, 239, 251);
+            border:none;
+            font-family: sans-serif;
+            font-size:20px;
+            border-radius: 10px;
+            line-height: 42px;
+            position: relative;
+            cursor: pointer;
+            // &:hover {
+            //     color:white;
+            //     background: transparent;
+            //      box-shadow:none;
+            //   }
+            //   &:before,
+            //   &:after{
+            //     content:'';
+            //     position:absolute;
+            //     top:0;
+            //     right:0;
+            //     height:2px;
+            //     width:0;
+            //     background: #0933f0;
+            //     box-shadow:
+            //      -1px -1px 5px 0px #fff,
+            //      7px 7px 20px 0px #0003,
+            //      4px 4px 5px 0px #0002;
+            //     transition:400ms ease all;
+            //   }
+            //   &:after{
+            //     right:inherit;
+            //     top:inherit;
+            //     left:0;
+            //     bottom:0;
+            //   }
+            //   &:hover:before,
+            //   &:hover:after{
+            //     width:100%;
+            //     transition:800ms ease all;
+            //   }
+            &:hover{
+                background-color: rgba(255, 255, 255, 0);
+                color: white;
+                font-weight: bold;
+                border: solid 1px;
+            }
+        }
+    }
+
+}
+// ecran 1416px +++++++++++
+@media screen and (max-width:1416px){
+    .sectionOne{
+        .slogan{
+            h1{
+                #{$fz}:3em;
+            }
+        }
+
+    }
+
+}
+// ecran 1126px++++++++++++++
+@media screen and (max-width:1126px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:500px;
+        .slogan{
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .pub{
+            #{$w}:40%;
+            .pubDate{
+                i{
+                    #{$fz}:1em;
+                }
+                h1{
+                    #{$fz}:0.8em;
+
+                }
+            }
+        }
+        .desc{
+            h1{
+                #{$fz}:0.9em;
+            }
+            .btn-1{
+                font-size:0.9em;
+            }
+        }
+
+    }
+
+}
+// ecran laptop 1024px++++++++++++++++++++++
+@media screen and (max-width:1024px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:500px;
+        .slogan{
+            h1{
+                #{$fz}:2.4em;
+            }
+        }
+        .pub{
+            #{$w}:40%;
+            .pubDate{
+                i{
+                    #{$fz}:1em;
+                }
+                h1{
+                    #{$fz}:0.8em;
+
+                }
+            }
+        }
+        .desc{
+            h1{
+                #{$fz}:0.9em;
+            }
+            .btn-1{
+                font-size:0.9em;
+            }
+        }
+
+    }
+
+}
+// ECRAN 755 +++++++++++++++++++++++++++++
+@media screen and (max-width:755px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:300px;
+
+        .slogan{
+            #{$w}:50%;
+            margin: 0 20% 0 20%;
+            h1{
+                #{$fz}:2.4em;
+            }
+        }
+        .pub{
+            display: none;
+        }
+        .desc{
+            margin: 0 20% 24% 20%;
+            h1{
+                #{$fz}:0.5em;
+                display: none;
+            }
+            .btn-1{
+                font-size:0.9em;
+                #{$w}:50%;
+                #{$h}:50%;
+            }
+        }
+
+    }
+
+}
+// ecran 612
+@media screen and (max-width:612px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:300px;
+
+        .slogan{
+            #{$w}:50%;
+            margin: 0 20% 0 20%;
+            h1{
+                #{$fz}:2em;
+            }
+        }
+        .pub{
+            display: none;
+        }
+        .desc{
+            margin: 0 20% 24% 20%;
+            h1{
+                #{$fz}:0.9em;
+                display: none;
+            }
+            .btn-1{
+                font-size:0.9em;
+                #{$w}:50%;
+                #{$h}:50%;
+            }
+        }
+
+    }
+
+}
+// ecran 490
+@media screen and (max-width:490px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:300px;
+
+        .slogan{
+            #{$w}:50%;
+            margin: 0 20% 0 20%;
+            h1{
+                #{$fz}:2em;
+            }
+        }
+        .pub{
+            display: none;
+        }
+        .desc{
+            margin: 0 20% 24% 20%;
+            h1{
+                #{$fz}:0.9em;
+                display: none;
+            }
+            .btn-1{
+                font-size:0.9em;
+                #{$w}:70%;
+                #{$h}:50%;
+            }
+        }
+
+    }
+
+}
+// ecran 439
+@media screen and (max-width:439px){
+    .sectionOne{
+        @include tailleSection;
+        #{$h}:300px;
+
+        .slogan{
+            #{$w}:50%;
+            margin: 0 20% 0 20%;
+            h1{
+                #{$fz}:1.6em;
+            }
+        }
+        .pub{
+            display: none;
+        }
+        .desc{
+            margin: 0 20% 24% 20%;
+            h1{
+                #{$fz}:0.9em;
+                display: none;
+            }
+            .btn-1{
+                font-size:0.9em;
+                #{$w}:70%;
+                #{$h}:50%;
+            }
+        }
+
+    }
+
+}

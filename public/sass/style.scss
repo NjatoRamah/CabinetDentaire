@@ -1,0 +1,25 @@
+@import 'variable';
+@import 'function';
+@import 'header';
+@import 'section';
+@import 'sectionTwo';
+@import 'sectionF';
+@import 'sectionFor';
+@import 'footer';
+// section soin
+@import '../sass/soin/soinSectOne';
+@import '../sass/soin/sectDetailOne';
+// inscription
+@import '../sass/inscription/sectionInscrit';
+// rendez-vous
+@import '../sass/rendez-vous/rdv';
+//  profile 
+@import'../sass/profile/sectProfile';
+// contact
+@import'../sass/contact/sectContact';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

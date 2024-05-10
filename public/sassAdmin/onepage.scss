@@ -1,0 +1,23 @@
+@import 'services/service';
+@import 'message/message';
+@import 'patient/patient';
+@import 'commentaire/coms.scss';
+@import 'contact/contact.scss';
+@import 'rdv/rdv.scss';
+
+.contenuParty{
+    @include taille (80%,auto);
+    background-color: #e9eaef;
+    @include position (absolute,9.3%,20%);
+
+    // transform: translateY(100%);
+    // display: none;
+}
+.patch2{
+    background-color: rgb(255, 119, 0);
+}
+.active{
+    display: block;
+
+
+}

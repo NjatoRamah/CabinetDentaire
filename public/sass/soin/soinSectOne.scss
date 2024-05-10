@@ -1,0 +1,255 @@
+// test
+.sectionTest{
+    @include taille(100%,900px);
+    @include flexbox(flex,row,space-evenly);
+
+    padding: 30px 0 30px 0;
+
+    .care{
+        @include taille (30%,300px);
+        box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        img{
+            @include taille(102%,102%)
+        }
+        .apros{
+            @include taille (100%,100%);
+            @include position (absolute,80%,0);
+            background:linear-gradient(rgba(255, 255, 255, 0.514),rgba(44, 72, 255, 0.662),rgb(44, 72, 255)) ;
+            transition: 1s ease;
+            // transform: translateY(100%);
+            @include flexbox(flex,column,space-between);
+            padding-top: 2%;
+            .btn-soin{
+                @include taille (129px,55px);
+                @include flexbox (flex,row,center);
+                background-color: #0b5fa5;
+                text-decoration: none;
+                border: none;
+                #{$b-rad}:5px;
+                #{$famil}:sans-serif;
+                #{$fz}:15pt;
+                color: rgb(255, 255, 255);
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+                i{
+                    margin-right: 5px;
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: #0507a8;
+                    border-radius: 5px;
+                    //  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                    //  7px 7px 20px 0px rgba(0,0,0,.1),
+                    //  4px 4px 5px 0px rgba(0,0,0,.1);
+                    transition: all 0.3s ease;
+                  }
+                  &:hover {
+                    color: #fff;
+                  }
+                  &:hover:after {
+                    left: 0;
+                    width: 100%;
+                  }
+                //   &:active {
+                //     top: 2px;
+                //   }
+            }
+
+        }
+        &:hover{
+            .apros{
+                // transform: translateY(0%);
+               padding: 10% 0;
+                top:0%;
+                transition: 1s ease;
+            }
+        }
+    }
+}
+// test
+.soinSect-1{
+    @include taille(100%,auto);
+    @include flexbox(flex,column,center);
+    padding: 30px 0 30px 0;
+    table{
+        width: 80%;
+        height: 90%;
+        th{
+            width:50%;
+            height: 50%;
+            padding: 5px 20px 5px 20px;
+            text-align: inherit;
+            h1{
+                #{$fz}:3em;
+                #{$col}:rgb(33, 105, 229);
+                font-family: sans-serif;
+
+            }
+            p{
+                #{$famil}:sans-serif;
+                #{$fz}:1em;
+                text-align: justify;
+                #{$col}:rgb(93, 139, 217);
+                margin: 30px 0 30px 0;
+                text-overflow: ellipsis;
+            }
+            .btn-soin{
+                @include taille (129px,55px);
+                @include flexbox (flex,row,center);
+                background-color: #0b5fa5;
+                text-decoration: none;
+                border: none;
+                #{$b-rad}:5px;
+                #{$famil}:sans-serif;
+                #{$fz}:15pt;
+                color: rgb(255, 255, 255);
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: #0507a8;
+                    border-radius: 5px;
+                    //  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                    //  7px 7px 20px 0px rgba(0,0,0,.1),
+                    //  4px 4px 5px 0px rgba(0,0,0,.1);
+                    transition: all 0.3s ease;
+                  }
+                  &:hover {
+                    color: #fff;
+                  }
+                  &:hover:after {
+                    left: 0;
+                    width: 100%;
+                  }
+                //   &:active {
+                //     top: 2px;
+                //   }
+            }
+            img{
+                #{$w}:60%;
+                border-radius: 10px;
+                box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+            }
+        }
+    }
+}
+// ecran 1060 ++++++++++++
+@media screen and (max-width:1079px) {
+    .soinSect-1{
+        table{
+            th{
+                h1{
+                    #{$fz}:3em;
+
+                }
+                p{
+                    #{$fz}:1em;
+                }
+                .btn-soin{
+                    @include taille (129px,55px);
+                }
+                img{
+                    #{$w}:250px;
+                    border-radius: 10px;
+                    box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+                }
+            }
+        }
+    }
+}
+// ecran 765 ++++++++++++
+@media screen and (max-width:765px) {
+    .soinSect-1{
+        table{
+            th{
+                h1{
+                    #{$fz}:3em;
+
+                }
+                p{
+                    #{$fz}:0.8em;
+                }
+                .btn-soin{
+                    @include taille (129px,55px);
+                }
+                img{
+                    #{$w}:200px;
+                    border-radius: 10px;
+                    box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+                }
+            }
+        }
+    }
+}
+// ecran 729 ++++++++++++
+@media screen and (max-width:729px) {
+    .soinSect-1{
+        table{
+            th{
+                h1{
+                    #{$fz}:2em;
+
+                }
+                p{
+                    #{$fz}:0.8em;
+                }
+                .btn-soin{
+                    @include taille (90px,40px);
+                    #{$fz}:1em;
+                }
+                img{
+                    #{$w}:200px;
+                    border-radius: 10px;
+                    box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+                }
+            }
+        }
+    }
+}
+// ecran 520 ++++++++++++
+@media screen and (max-width:521px) {
+    .soinSect-1{
+        table{
+            .barPht{
+            display: none;
+            }
+            th{
+                h1{
+                    #{$fz}:2em;
+
+                }
+                p{
+                    #{$fz}:0.8em;
+                }
+                .btn-soin{
+                    @include taille (90px,40px);
+                    #{$fz}:1em;
+                }
+                img{
+                    #{$w}:200px;
+                    border-radius: 10px;
+                    box-shadow: 5px 7px 16px 0 rgb(9, 9, 9);
+                }
+            }
+        }
+    }
+}
+

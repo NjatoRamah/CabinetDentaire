@@ -1,0 +1,82 @@
+aside{
+    @include taille (20%,600px);
+    @include position (absolute,0,0);
+    display: flex;
+    .adminPrf{
+        @include taille (100%,200px);
+        @include position (absolute,12%,0);
+        @include flexbox (flex,column,space-evenly);
+        #{$bg}:#1c2123;
+        .admimg{
+            @include taille (90px,90px);
+            overflow: hidden;
+            border-radius: 100px;
+            box-shadow: 0 0 11px 0 rgb(133, 133, 133);
+            img{
+                #{$w}:100%;
+            }
+        }
+        h2{
+            #{$famil}:sans-serif;
+            #{$fz}:1.5em;
+            color:  white;
+        }
+    }
+    .barNav{
+        @include taille (100%,500px);
+
+        @include position (absolute,45%,0);
+        @include flexbox (flex,column,end);
+        .navy{
+            #{$w}:100%;
+            #{$h}:100%;
+            @include flexbox(flex,column,space-around);
+            .nav{
+                list-style: none;
+                text-decoration: none;
+                #{$dp}:flex;
+                justify-content:flex-start;
+                align-items:center;
+                @include taille(100%,20%);
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+
+                .nav-link{
+                    text-decoration: none;
+                    color: rgba(225, 225, 225, 0.75);
+                    font: 1.2em Raleway;
+                    margin: 0px 10px;
+                    padding: 10px 10px;
+                    position: relative;
+                    cursor: pointer;
+
+                }
+                &:before{
+                    content: "";
+                    @include taille(20%,100%);
+                    #{$bg}:rgb(0, 89, 255);
+                    @include position (absolute,0,-18%);
+                    transform: translateY(100%);
+                    transition: 0.2s;
+                    z-index: 1;
+
+                }
+
+                &:hover{
+                    #{$bg}:#1c2123;
+                    .nav-link{
+                        color: rgb(255, 255, 255);
+                    }
+                    transition: 0.3s ease;
+                }
+                &:hover:before{
+                    transform: translateX(0%);
+                    transition: 0.3s ease;
+                }
+            }
+        }
+
+
+    }
+}

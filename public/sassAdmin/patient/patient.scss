@@ -1,0 +1,51 @@
+.containtePatient{
+    @include taille (100%,900px);
+    #{$bg}:#e9eaef;
+    @include flexbox (flex,column,space-evenly);
+    .listPatient{
+        @include taille (90%,auto);
+        h1{
+            #{$fz}:1.5em;
+            #{$famil}:sans-serif;
+            margin: 10px 0 10px 20px;
+
+        }
+        .table{
+            @include taille (98%,auto);
+            margin:20px 20px;
+            th{
+                #{$w}:120px;
+                border-bottom: solid 2px rgb(83, 83, 250);
+                text-align: center;
+                color: rgb(87, 86, 86);
+            }
+            .tete{
+                #{$h}:50px;
+
+            }
+            td{
+                #{$h}:100px;
+                border-bottom: solid 2px rgb(83, 83, 250);
+                text-align: center;
+                img{
+                    @include taille (90px,90px);
+                    border-radius: 100px;
+                }
+            }
+            .sectOpt{
+                @include flexbox (flex,row,space-evenly);
+                .opt{
+                    @include taille (60px,60px);
+                    #{$bg}:#00bbdd;
+                    @include flexbox (flex,row,space-evenly);
+                    border-radius: 100px;
+                    a{
+                        #{$fz}:2.5em;
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

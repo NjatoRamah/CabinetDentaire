@@ -1,0 +1,181 @@
+.containtMsg{
+    @include taille (100%,900px);
+    @include flexbox (flex,column,center);
+    .contenuMsg{
+        @include taille (90%,70%);
+        @include flexbox (flex,row,center);
+        box-shadow: 0px 1px 3px -2px;
+        background-color:white;
+        margin-top: -20%;
+        .partieMsg{
+            @include taille (40%,100%);
+            @include flexbox (flex,column,space-evenly);
+            // align-items: flex-start;
+            justify-content: flex-start;
+            .barMsg{
+                @include taille (95%,10%);
+                border-bottom: solid 2px #d2d1d1;
+                form{
+                    @include taille (100%,100%);
+                    @include flexbox (flex,row,space-evenly);
+                    input{
+                        @include taille (60%,52%);
+                        outline: none;
+                        #{$b-rad}:10px;
+                        border: none;
+                        #{$bg}:#dad7d7;
+                        transition: 1s ease;
+                        @include hover-input;
+                    }
+                    button{
+                        @include taille (100px,37px);
+                        #{$b-rad}:10px;
+                        border: none;
+                        #{$bg}:#3e4b5b;
+                        color: blanchedalmond;
+                        #{$fz}:0.9em;
+                        font-weight: bold;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+            .barList{
+                @include taille (100%,70%);
+                @include flexbox (flex,column,space-evenly);
+                justify-content: flex-start;
+                overflow: scroll;
+                scrollbar-width: none;
+
+                .patientBlock{
+                    @include taille (90%,10%);
+                    @include flexbox (flex,row,flex-start);
+                    margin: 20px 0 5px 0;
+                    .pdp{
+                        @include taille (50px,50px);
+                        @include flexbox (flex,row,space-evenly);
+
+                        overflow: hidden;
+                        border-radius: 100px;
+                        margin-right: 10px;
+
+                        img{
+                            @include taille (100%,100%);
+                        }
+                    }
+                    .nom{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
+            }
+        }
+        .partiEnvoye{
+            @include taille (60%,100%);
+            @include flexbox (flex,column,center);
+            border-left:solid 2px #d2d1d1;
+            .afftest{
+                color: #dfdfdf;
+            }
+            .barProfil{
+                @include taille (95%,10%);
+                border-bottom:solid 2px #d2d1d1;
+                .contPdp{
+                    @include taille (50%,100%);
+                    @include flexbox (flex,row,flex-start);
+                    .pdp{
+                        @include taille (50px,50px);
+                        #{$bg}:black;
+                        #{$b-rad}:100px;
+                        margin: 0 15px 0 20px;
+                        overflow: hidden;
+                        img{
+                            @include taille (100%,100%);
+                        }
+                    }
+                    h2{
+                        #{$famil}:sans-serif;
+                        #{$fz}:1.2em;
+                        color: grey;
+                    }
+                }
+            }
+            .barAffiche{
+                @include taille (100%,80%);
+                @include flexbox (flex,column-reverse,flex-start);
+                overflow: scroll;
+                scrollbar-width: none;
+                .boxmess{
+                    @include taille (100%,auto);
+                    position: relative;
+                    margin: 7px 0;
+                    border-radius: 5px;
+                    @include flexbox (flex,row,end);
+                    justify-content: flex-start;
+                    .imgpro{
+                        @include taille (20px,20px);
+                        border-radius: 100px;
+                        overflow: hidden;
+                        margin-top: -7%;
+                        img{
+                            @include taille (100%,100%);
+                        }
+                    }
+
+                    h1{
+                        @include taille (36%,auto);
+                        background-color: #c4c4c4;
+                        font-size: 1.2em;
+                        margin: 3px 10px 3px 5px;
+                        padding: 10px 0 10px 10px;
+                        border-radius: 0px 29px 24px 19px;
+                    }
+                }
+                .boxmess2{
+                    @include taille (100%,auto);
+                    margin: 5px 0;
+                    border-radius: 5px;
+                    @include flexbox (flex,row,end);
+                    .imgpro{
+                        display: none;
+                    }
+
+                    h1{
+                        @include taille (36%,auto);
+                        background-color: #3c8dbc;
+                        color: white;
+                        font-size: 1.2em;
+                        margin: 3px 10px 3px 5px;
+                        padding: 10px 0 10px 10px;
+                        border-radius: 24px 24px 0px 19px;
+                    }
+                }
+            }
+            .barEnvoyeMsg{
+                @include taille (95%,10%);
+                @include flexbox (flex,row,space-evenly);
+                border-top:solid 2px #d2d1d1;
+                input{
+                    @include taille (70%,62%);
+                    border: none;
+                    outline: none;
+                    #{$bg}:#dad7d7;
+                    #{$b-rad}:10px;
+                    @include hover-input;
+
+                }
+                button{
+                    @include taille (100px,37px);
+                        #{$b-rad}:10px;
+                        border: none;
+                        #{$bg}:#3e4b5b;
+                        color: blanchedalmond;
+                        #{$fz}:0.9em;
+                        font-weight: bold;
+                        cursor: pointer;
+                }
+            }
+        }
+    }
+}

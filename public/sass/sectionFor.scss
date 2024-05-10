@@ -1,0 +1,266 @@
+.sectionFor{
+    @include tailleSection;
+    @include flexbox (flex,column,space-evenly);
+    .titrePatient{
+        @include taille(30%,15%);
+        @include flexbox (flex,row,space-evenly);
+        h1{
+            #{$fz}:45pt;
+            #{$col}:rgb(13, 27, 51);
+            font-family: sans-serif;
+        }
+    }
+    .slidePatient{
+        @include taille(90%,70%);
+        @include flexbox(flex,row,space-evenly);
+        .doc{
+            border-radius: 10px;
+        }
+        .PatientContenaire{
+            @include taille(45%,100%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(100px,100px);
+                #{$b-rad}:100px;
+                box-shadow: 0 0 16px 1px #0032f8;
+                overflow: hidden;
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                #{$b-rad}:10px;
+                #{$bgcol}:#054eaba1;
+                @include flexbox (flex,column,space-evenly);
+                padding: 0 30px 0 30px;
+                p{
+                    #{$fz}:12pt;
+                    #{$famil}:sans-serif;
+                    color: aliceblue;
+                    text-align: justify;
+                }
+                h1{
+                    #{$fz}:20pt;
+                    #{$famil}:sans-serif;
+                    color : aliceblue;
+                }
+                h2{
+                    #{$fz}:15pt;
+                    #{$famil}:sans-serif;
+                    color : aliceblue;
+                }
+            }
+        }
+    }
+
+
+}
+// ecran 1126px++++++++++++++++++
+@media screen and (max-width:1126px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .PatientContenaire{
+            @include taille(50%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(15%,22%);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:1em;
+                }
+                h1{
+                    #{$fz}:1.2em;
+                }
+                h2{
+                    #{$fz}:1em;
+                }
+            }
+        }
+
+    }
+}
+// ecran laptop 1024px+++++++++++++++
+@media screen and (max-width:1024px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .PatientContenaire{
+            @include taille(50%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(15%,22%);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:1em;
+                }
+                h1{
+                    #{$fz}:1.2em;
+                }
+                h2{
+                    #{$fz}:1em;
+                }
+            }
+        }
+
+    }
+}
+// ecran 862++++++++++++++++++++++++++++++++++
+@media screen and (max-width:862px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .PatientContenaire{
+            @include taille(50%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(15%,20%);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:1em;
+                }
+                h1{
+                    #{$fz}:1.2em;
+                }
+                h2{
+                    #{$fz}:1em;
+                }
+            }
+        }
+
+    }
+}
+//  ecran 755 +++++++++++++
+@media screen and (max-width:862px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            h1{
+                #{$fz}:2em;
+            }
+        }
+        .PatientContenaire{
+            @include taille(70%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(15%,22%);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:0.7em;
+                }
+                h1{
+                    #{$fz}:1em;
+                }
+                h2{
+                    #{$fz}:0.8em;
+                }
+            }
+        }
+
+    }
+}
+// ecran 612 ++++++++++
+@media screen and (max-width:612px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            h1{
+                #{$fz}:1.6em;
+            }
+        }
+        .PatientContenaire{
+            @include taille(90%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(15%,25%);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:0.7em;
+                }
+                h1{
+                    #{$fz}:1em;
+                }
+                h2{
+                    #{$fz}:0.8em;
+                }
+            }
+        }
+
+    }
+}
+// ecran 490 ++++++++++
+@media screen and (max-width:490px) {
+    .sectionFor{
+        #{$h}:500px;
+        .titrePatient{
+            #{$w} : 100%;
+            align-items: center;
+            text-align: center;
+            h1{
+                #{$fz}:1.6em;
+                #{$w} : 50%;
+            }
+        }
+        .PatientContenaire{
+            @include taille(90%,70%);
+            @include flexbox (flex,column,space-evenly);
+            .profilPatient{
+                @include taille(70px,70px);
+                img{
+                    width: 110%;
+                }
+            }
+            .contenuPatient{
+                @include taille(70%,50%);
+                p{
+                    #{$fz}:0.7em;
+                }
+                h1{
+                    #{$fz}:1em;
+                }
+                h2{
+                    #{$fz}:0.8em;
+                }
+            }
+        }
+
+    }
+}

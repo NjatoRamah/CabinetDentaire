@@ -1,0 +1,252 @@
+.containteServ{
+    @include taille (100%,auto);
+    @include flexbox (flex,column,space-evenly);
+    padding: 30px 0 30px 0;
+    .boxErr{
+        @include taille(400px,80px);
+        background-color: #00b679b0;
+        @include position(absolute,1%,32%);
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        h1{
+            font-size: 1.5em;
+            font-family: sans-serif;
+        }
+        animation: transy 1s ease;
+        @keyframes transy {
+            // 0%{transform: translateX(100%);}
+            // 100%{transform: translateX(0%);}
+            0%{opacity:0;};
+            100%{opacity:1;};
+
+        }
+        &.back{
+            // transform: translateX(100%);
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    }
+    .listeSoin{
+        @include taille (90%,auto);
+        @include flexbox (flex,column,space-evenly);
+        align-items: flex-start;
+        background-color: white;
+        box-shadow:0px 1px 3px -2px;
+        padding: 10px 0 10px 0;
+        margin-top: -20%;
+        position: relative;
+        .supprBox{
+            @include taille(100%,100%);
+            background-color:#d3d3d3b0;
+            backdrop-filter: blur(5px);
+            @include position(absolute,0%,0%);
+            @include flexbox(flex,row,center);
+            .confirmSuppr{
+                @include taille(400px,215px);
+                background-color:#1cc551b0;
+                border-radius: 10px;
+                @include flexbox(flex,column,space-evenly);
+                i{
+                    font-size: 3em;
+                    animation: check 1s ease infinite;
+
+                     @keyframes check {
+
+                        0%{opacity:0;};
+                        100%{opacity:1;};
+
+                    }
+
+                }
+
+                h1{
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    text-align: center
+                }
+                .ok{
+                    @include taille (100px,42px);
+                    background-color: #50846a;
+                    @include flexbox(flex,row,center);
+                    text-decoration: none;
+                    color: black;
+                    border-radius: 10px;
+                    font-size: 1.5em;
+                }
+            }
+            .fa-xmark{
+                @include position(absolute,2%,95%);
+                font-size: 2.5em;
+                cursor: pointer;
+                text-decoration: none;
+                color: black;
+            }
+            &.actve{
+                display: none;
+            }
+        }
+        h1{
+            #{$fz}:1.8em;
+            #{$famil}:sans-serif;
+            margin: 30px 0 30px 20px;
+            text-decoration-line: underline;
+
+        }
+        .table{
+            @include taille (98%,auto);
+            margin:20px 20px;
+            th{
+                #{$w}:120px;
+                border-bottom: solid 2px rgb(83, 83, 250);
+                text-align:center;
+                color: rgb(87, 86, 86);
+            }
+            .tete{
+                #{$h}:50px;
+
+
+            }
+            td{
+                #{$h}:150px;
+                border-bottom: solid 2px rgb(83, 83, 250);
+                text-align: center;
+                overflow: hidden;
+                img{
+                    width: 50%;
+                }
+                .sectOpt{
+                    @include flexbox (flex,row,space-evenly);
+
+                    .opt{
+                        @include taille (40px,40px);
+                        cursor: pointer;
+                        #{$bg}:#00bbdd;
+                        @include flexbox (flex,row,space-evenly);
+                        border-radius: 100px;
+                        a{
+                            #{$fz}:1.5em;
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                    .ONE{
+                        background-color: #00b67a;
+                    }
+                    .TWO{
+                        background-color: red;
+                    }
+                }
+            }
+
+        }
+    }
+    .modificationSoin{
+        @include taille (100%,900px);
+        background-color: #e9eaef ;
+        @include flexbox (flex,row,space-evenly);
+        margin-top: 30px;
+        .ajoutSoin{
+            @include taille (75%,600px);
+            border-radius: 5px;
+            box-shadow: 0px 1px 3px -2px;
+            border-top: solid 3px #00bbdd;
+            @include flexbox (flex,column,start);
+            margin-top: -24%;
+            #{$bg}:white;
+            .barAjout{
+                @include taille (100%,10%);
+                @include flexbox (flex,row,start);
+                #{$b-rad}:10px;
+                padding-left: 15px;
+                h1{
+                    #{$fz}:1.7em;
+                    #{$famil}:sans-serif;
+
+                }
+            }
+            .formAjout{
+                @include taille (100%,80%);
+                @include flexbox (flex,column,space-evenly);
+                border-top: solid 2px grey;
+                input{
+                    @include taille (90%,10%);
+                    outline: none;
+                    transition: 0.5s;
+                    &:hover{
+                        padding-left: 10px;
+                        transition: 0.5s ease;
+                    }
+                }
+
+                button{
+                    @include taille (100px,40px);
+                    #{$bg}:#00bbdd;
+                    border: none;
+                    #{$b-rad}:5px;
+                    cursor: pointer;
+                    color: blanchedalmond;
+                    #{$fz}:1em;
+                    font-weight: bold;
+
+                }
+            }
+
+        }
+        .modifSoin{
+            @include taille (75%,800px);
+            border-radius: 5px;
+            box-shadow: 0px 1px 3px -2px;
+            border-top: solid 3px #00b67a;
+            @include flexbox (flex,column,start);
+            #{$bg}:white;
+            .barModif{
+                @include taille (100%,10%);
+                @include flexbox (flex,column,space-evenly);
+                align-items:start ;
+                h1{
+                    #{$fz}:1.7em;
+                    #{$famil}:sans-serif;
+                }
+            }
+            .formModif{
+                @include taille (100%,90%);
+                @include flexbox (flex,column,space-evenly);
+                input{
+                    @include taille (90%,10%);
+                    outline: none;
+                    transition: 0.5s;
+                    &:hover{
+                        padding-left: 10px;
+                        transition: 0.5s ease;
+                    }
+                }
+                button{
+                    @include taille (100px,40px);
+                    #{$bg}:#00b67a;
+                    border: none;
+                    #{$b-rad}:5px;
+                    cursor: pointer;
+                    color: blanchedalmond;
+                    #{$fz}:1em;
+                    font-weight: bold;
+
+                }
+                .placeImg{
+                    @include taille (50%,50%);
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    background-position: cover;
+                    background-size: cover;
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,619 @@
+.contact{
+    @include taille (100%,1200px);
+    @include flexbox (flex,column,start);
+    .afferror{
+        @include taille (300px,60px);
+        background-color: rgba(0, 255, 0, 0.395);
+        @include position(absolute,25%,80%);
+        @include flexbox(flex,column,center);
+        border-radius: 5px;
+        cursor: pointer;
+        animation: transy 1s ease;
+        z-index: 1;
+        @keyframes transy {
+            // 0%{transform: translateX(100%);}
+            // 100%{transform: translateX(0%);}
+            0%{opacity:0;};
+            100%{opacity:1;};
+
+        }
+        p{
+            font-size: 1em;
+            font-family: sans-serif;
+        }
+        &.back{
+            // transform: translateX(100%);
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    }
+    h1{
+        font-size: 3.5em;
+        border-bottom: solid 2px blue;
+        color:#04003b;
+        margin-bottom: 10px;
+    }
+    .contactainer{
+        @include taille (80%,600px);
+        box-shadow: 0 0 6px -3px;
+        border-radius: 10px;
+        margin: 50px 0 50px 0;
+        form{
+            @include taille (670px,100%);
+            @include flexbox (flex,column,space-evenly);
+            background-color: rgba(255, 255, 255, 0.57);
+            border-radius: 10px;
+            h4{
+                font-size: 0.8em;
+                font-family: sans-serif;
+                color: rgb(52, 52, 52);
+            }
+            input{
+                @include taille (70%,10%);
+                outline: none;
+                border: none;
+                border-bottom: solid 1px grey;
+                padding-top: 23px;
+                padding-left: 2px;
+                transition: 1s ease;
+                &:hover{
+                    padding-left: 15px;
+                    border-bottom: solid 1px rgb(0, 85, 255);
+                    transition: 0.5s ease;
+
+                }
+            }
+            textarea{
+                @include taille (70%,30%);
+                resize: none;
+                outline: none;
+            }
+            button{
+                @include taille (350px,50px);
+                background-color: rgb(0, 85, 255);
+                border: none;
+                font-size: 1em;
+                border-radius: 5px;
+                &:hover{
+                    #{$bg}:rgb(3, 0, 33);
+                    transition: 1s;
+                    color: beige;
+                }
+            }
+            h2{
+                font-size: 1em;
+                font-weight: 100;
+                color: rgb(52, 52, 52);
+            }
+        }
+    }
+    .contaOne{
+        @include taille (100%,35%);
+        @include flexbox (flex,row,space-evenly);
+        .blockOne{
+            @include taille (27%,45%);
+            @include flexbox (flex,row,center);
+            #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+            border-radius: 10px;
+            transition: 0.7s;
+            i{
+                font-size: 3em;
+                margin-right: 20px;
+                color: aliceblue;
+            }
+            h2{
+                font-size: 1.5em;
+                color: aliceblue;
+                font-family: sans-serif;
+                span{
+                    font-size: 0.8em;
+                }
+            }
+            &:hover{
+                transform: translateY(-10%);
+                box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                transition: 0.7s ease;
+
+            }
+        }
+    }
+}
+// ecran 1492
+@media screen and (max-width:1943px) {
+    .contact{
+        @include taille (100%,1200px);
+        @include flexbox (flex,column,start);
+        h1{
+            font-size: 3.5em;
+            border-bottom: solid 2px blue;
+            color:#04003b;
+            margin-bottom: 10px;
+        }
+        .contactainer{
+            @include taille (80%,600px);
+            box-shadow: 0 0 6px -3px;
+            border-radius: 10px;
+            margin: 50px 0 50px 0;
+            form{
+                @include taille (670px,100%);
+                @include flexbox (flex,column,space-evenly);
+                background-color: rgba(255, 255, 255, 0.57);
+                border-radius: 10px;
+                h4{
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    color: rgb(52, 52, 52);
+                }
+                input{
+                    @include taille (70%,10%);
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px grey;
+                    padding-top: 23px;
+                    padding-left: 2px;
+                    transition: 1s ease;
+                    &:hover{
+                        padding-left: 15px;
+                        border-bottom: solid 1px rgb(0, 85, 255);
+                        transition: 0.5s ease;
+
+                    }
+                }
+                textarea{
+                    @include taille (70%,30%);
+                    resize: none;
+                    outline: none;
+                }
+                button{
+                    @include taille (350px,50px);
+                    background-color: rgb(0, 85, 255);
+                    border: none;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    &:hover{
+                        #{$bg}:rgb(3, 0, 33);
+                        transition: 1s;
+                        color: beige;
+                    }
+                }
+                h2{
+                    font-size: 1em;
+                    font-weight: 100;
+                    color: rgb(52, 52, 52);
+                }
+            }
+        }
+        .contaOne{
+            @include taille (100%,35%);
+            @include flexbox (flex,row,space-evenly);
+            .blockOne{
+                @include taille (27%,45%);
+                @include flexbox (flex,row,center);
+                #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+                border-radius: 10px;
+                transition: 0.7s;
+                i{
+                    font-size: 2.5em;
+                    margin-right: 20px;
+                    color: aliceblue;
+                }
+                h2{
+                    font-size: 1em;
+                    color: aliceblue;
+                    font-family: sans-serif;
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10%);
+                    box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                    transition: 0.7s ease;
+
+                }
+            }
+        }
+    }
+
+}
+// ecran 1098
+@media screen and (max-width:1099px) {
+    .contact{
+        @include taille (100%,auto);
+        @include flexbox (flex,column,start);
+        h1{
+            font-size: 3.5em;
+            border-bottom: solid 2px blue;
+            color:#04003b;
+            margin-bottom: 10px;
+        }
+        .contactainer{
+            @include taille (80%,600px);
+            box-shadow: 0 0 6px -3px;
+            border-radius: 10px;
+            margin: 50px 0 50px 0;
+            form{
+                @include taille (670px,100%);
+                @include flexbox (flex,column,space-evenly);
+                background-color: rgba(255, 255, 255, 0.57);
+                border-radius: 10px;
+                h4{
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    color: rgb(52, 52, 52);
+                }
+                input{
+                    @include taille (70%,10%);
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px grey;
+                    padding-top: 23px;
+                    padding-left: 2px;
+                    transition: 1s ease;
+                    &:hover{
+                        padding-left: 15px;
+                        border-bottom: solid 1px rgb(0, 85, 255);
+                        transition: 0.5s ease;
+
+                    }
+                }
+                textarea{
+                    @include taille (70%,30%);
+                    resize: none;
+                    outline: none;
+                }
+                button{
+                    @include taille (350px,50px);
+                    background-color: rgb(0, 85, 255);
+                    border: none;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    &:hover{
+                        #{$bg}:rgb(3, 0, 33);
+                        transition: 1s;
+                        color: beige;
+                    }
+                }
+                h2{
+                    font-size: 1em;
+                    font-weight: 100;
+                    color: rgb(52, 52, 52);
+                }
+            }
+        }
+        .contaOne{
+            @include taille (100%,300px);
+            @include flexbox (flex,row,space-evenly);
+            .blockOne{
+                @include taille (27%,45%);
+                @include flexbox (flex,row,center);
+                #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+                border-radius: 10px;
+                transition: 0.7s;
+                i{
+                    font-size: 2.5em;
+                    margin-right: 20px;
+                    margin-left: 5px;
+                    color: aliceblue;
+
+                }
+                h2{
+                    font-size: 1em;
+                    color: aliceblue;
+                    font-family: sans-serif;
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10%);
+                    box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                    transition: 0.7s ease;
+
+                }
+            }
+        }
+    }
+
+}
+// ecran 786
+@media screen and (max-width:787px) {
+    .contact{
+        @include taille (100%,auto);
+        @include flexbox (flex,column,start);
+        h1{
+            font-size: 3.5em;
+            border-bottom: solid 2px blue;
+            color:#04003b;
+            margin-bottom: 10px;
+        }
+        .contactainer{
+            @include taille (80%,600px);
+            box-shadow: 0 0 6px -3px;
+            border-radius: 10px;
+            margin: 50px 0 50px 0;
+            form{
+                @include taille (670px,100%);
+                @include flexbox (flex,column,space-evenly);
+                background-color: rgba(255, 255, 255, 0.57);
+                border-radius: 10px;
+                h4{
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    color: rgb(52, 52, 52);
+                }
+                input{
+                    @include taille (70%,10%);
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px grey;
+                    padding-top: 23px;
+                    padding-left: 2px;
+                    transition: 1s ease;
+                    &:hover{
+                        padding-left: 15px;
+                        border-bottom: solid 1px rgb(0, 85, 255);
+                        transition: 0.5s ease;
+
+                    }
+                }
+                textarea{
+                    @include taille (70%,30%);
+                    resize: none;
+                    outline: none;
+                }
+                button{
+                    @include taille (350px,50px);
+                    background-color: rgb(0, 85, 255);
+                    border: none;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    &:hover{
+                        #{$bg}:rgb(3, 0, 33);
+                        transition: 1s;
+                        color: beige;
+                    }
+                }
+                h2{
+                    font-size: 1em;
+                    font-weight: 100;
+                    color: rgb(52, 52, 52);
+                }
+            }
+        }
+        .contaOne{
+            @include taille (100%,600px);
+            @include flexbox (flex,column,space-evenly);
+            .blockOne{
+                @include taille (300px,100px);
+                @include flexbox (flex,row,center);
+                #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+                border-radius: 10px;
+                transition: 0.7s;
+                i{
+                    font-size: 2.5em;
+                    margin-right: 20px;
+                    margin-left: 5px;
+                    color: aliceblue;
+
+                }
+                h2{
+                    font-size: 1em;
+                    color: aliceblue;
+                    font-family: sans-serif;
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10%);
+                    box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                    transition: 0.7s ease;
+
+                }
+            }
+        }
+    }
+
+}
+// ecran 776
+@media screen and (max-width:777px) {
+    .contact{
+        @include taille (100%,auto);
+        @include flexbox (flex,column,start);
+        h1{
+            font-size: 3.5em;
+            border-bottom: solid 2px blue;
+            color:#04003b;
+            margin-bottom: 10px;
+        }
+        .contactainer{
+            @include taille (80%,600px);
+            box-shadow: 0 0 6px -3px;
+            border-radius: 10px;
+            margin: 50px 0 50px 0;
+            form{
+                @include taille (100%,100%);
+                @include flexbox (flex,column,space-evenly);
+                background-color: rgba(255, 255, 255, 0.57);
+                border-radius: 10px;
+                h4{
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    color: rgb(52, 52, 52);
+                }
+                input{
+                    @include taille (70%,10%);
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px grey;
+                    padding-top: 23px;
+                    padding-left: 2px;
+                    transition: 1s ease;
+                    &:hover{
+                        padding-left: 15px;
+                        border-bottom: solid 1px rgb(0, 85, 255);
+                        transition: 0.5s ease;
+
+                    }
+                }
+                textarea{
+                    @include taille (70%,30%);
+                    resize: none;
+                    outline: none;
+                }
+                button{
+                    @include taille (350px,50px);
+                    background-color: rgb(0, 85, 255);
+                    border: none;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    &:hover{
+                        #{$bg}:rgb(3, 0, 33);
+                        transition: 1s;
+                        color: beige;
+                    }
+                }
+                h2{
+                    font-size: 1em;
+                    font-weight: 100;
+                    color: rgb(52, 52, 52);
+                }
+            }
+        }
+        .contaOne{
+            @include taille (100%,600px);
+            @include flexbox (flex,column,space-evenly);
+            .blockOne{
+                @include taille (300px,100px);
+                @include flexbox (flex,row,center);
+                #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+                border-radius: 10px;
+                transition: 0.7s;
+                i{
+                    font-size: 2.5em;
+                    margin-right: 20px;
+                    margin-left: 5px;
+                    color: aliceblue;
+
+                }
+                h2{
+                    font-size: 1em;
+                    color: aliceblue;
+                    font-family: sans-serif;
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10%);
+                    box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                    transition: 0.7s ease;
+
+                }
+            }
+        }
+    }
+
+}
+// ecran 624
+@media screen and (max-width:625px) {
+    .contact{
+        @include taille (100%,auto);
+        @include flexbox (flex,column,start);
+        h1{
+            font-size: 3.5em;
+            border-bottom: solid 2px blue;
+            color:#04003b;
+            margin-bottom: 10px;
+        }
+        .contactainer{
+            @include taille (80%,600px);
+            box-shadow: 0 0 6px -3px;
+            border-radius: 10px;
+            margin: 50px 0 50px 0;
+            form{
+                @include taille (100%,100%);
+                @include flexbox (flex,column,space-evenly);
+                background-color: rgba(255, 255, 255, 0.57);
+                border-radius: 10px;
+                h4{
+                    font-size: 0.8em;
+                    font-family: sans-serif;
+                    color: rgb(52, 52, 52);
+                }
+                input{
+                    @include taille (70%,10%);
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px grey;
+                    padding-top: 23px;
+                    padding-left: 2px;
+                    transition: 1s ease;
+                    &:hover{
+                        padding-left: 15px;
+                        border-bottom: solid 1px rgb(0, 85, 255);
+                        transition: 0.5s ease;
+
+                    }
+                }
+                textarea{
+                    @include taille (70%,30%);
+                    resize: none;
+                    outline: none;
+                }
+                button{
+                    @include taille (70%,50px);
+                    background-color: rgb(0, 85, 255);
+                    border: none;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    &:hover{
+                        #{$bg}:rgb(3, 0, 33);
+                        transition: 1s;
+                        color: beige;
+                    }
+                }
+                h2{
+                    font-size: 1em;
+                    font-weight: 100;
+                    color: rgb(52, 52, 52);
+                }
+            }
+        }
+        .contaOne{
+            @include taille (100%,600px);
+            @include flexbox (flex,column,space-evenly);
+            .blockOne{
+                @include taille (300px,100px);
+                @include flexbox (flex,row,center);
+                #{$bg}:linear-gradient(120deg, rgb(0, 106, 255), rgb(71, 166, 255), rgb(38, 189, 215));
+                border-radius: 10px;
+                transition: 0.7s;
+                i{
+                    font-size: 2.5em;
+                    margin-right: 20px;
+                    margin-left: 5px;
+                    color: aliceblue;
+
+                }
+                h2{
+                    font-size: 1em;
+                    color: aliceblue;
+                    font-family: sans-serif;
+                    span{
+                        font-size: 0.8em;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10%);
+                    box-shadow:2px 45px 42px -30px rgb(45, 62, 103);
+                    transition: 0.7s ease;
+
+                }
+            }
+        }
+    }
+
+}
+

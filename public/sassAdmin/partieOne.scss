@@ -1,0 +1,182 @@
+.contenu{
+    @include taille (80%,auto);
+    background-color: #e9eaef;
+    @include position (absolute,9.3%,20%);
+    @include flexbox (flex,column,flex-start);
+    .ensemble{
+        @include taille (100%,400px);
+        @include flexbox (flex,row,space-evenly);
+        flex-wrap: wrap;
+        .partiContaint{
+            @include taille (30%,170px);
+            @include flexbox (flex,column,space-evenly);
+            #{$bg}:#ffffff;
+            box-shadow:0px 1px 3px -2px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            .iconLg{
+                @include taille (90px,90px);
+                @include flexbox (flex,column,center);
+                #{$bg}:#00bbdd;
+                border-radius:100px;
+                box-shadow: 0 0 11px 1px rgb(121, 201, 227);
+                i{
+                    font-size: 3em;
+                    color: #ffffff;
+                }
+            }
+            h4{
+                #{$famil}:"Roboto", sans-serif;
+                font-size: 1.5em;
+                font-weight: 100;
+            }
+            .containteBefor{
+                @include taille (100%,100%);
+                @include position (absolute,0,0);
+                @include flexbox (flex,row,center);
+                #{$bg}:#00bcdda9;
+                border-radius: 5px;
+                transform: translateX(-100%);
+                transition: 1s ease;
+                button{
+                    @include taille (80px,40px);
+                    #{$bg}:#3e4b5b;
+                    border: none;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    font-size: 1em;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    i{
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        #{$bg}:#252c35;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &:hover{
+                .containteBefor{
+                    transform: translateX(0%);
+                    transition: 1s ease;
+                }
+            }
+        }
+    }
+    .ensemble-two{
+        @include taille (100%,500px);
+        @include flexbox (flex,row,space-evenly);
+        .membreListe{
+            @include taille (47%,90%);
+            @include flexbox (flex,column,space-evenly);
+            #{$bg}:#ffffff;
+            box-shadow:0px 1px 3px -2px;
+            border-radius: 5px;
+            .barPatient{
+                @include taille (100%,15%);
+                @include flexbox (flex,row,start);
+                border-top: solid 4px #00a65a;
+                border-radius: 5px;
+                h3{
+                    #{$famil}: sans-serif;
+                    font-weight: 100;
+                    #{$fz}:2em;
+                    margin-left: 10px;
+                }
+            }
+            .listPatient{
+                @include taille (100%,70%);
+                border-top: solid 2px #c0c0c0;
+                border-bottom: solid 2px #c0c0c0;
+                @include flexbox (flex,row,space-evenly);
+                flex-wrap: wrap;
+                overflow: scroll;
+                scrollbar-width: none;
+                .prioPat{
+                    @include taille (150px,130px);
+                    @include flexbox (flex,column,space-evenly);
+                    .promg{
+                        @include taille (90px,90px);
+                        border-radius: 100px;
+                        overflow: hidden;
+                    }
+                    h5{
+                        #{$fz}:1.4em;
+                        #{$famil}:sans-serif;
+                    }
+                    img{
+                        #{$w}:100%;
+                    }
+                }
+            }
+            a{
+                @include taille (30%,15%);
+                @include flexbox (flex,column,center);
+                #{$fz}:1.4em;
+                color: #0072dd;
+                #{$famil}:sans-serif;
+
+            }
+        }
+        .comsList{
+            @include taille (47%,90%);
+            @include flexbox (flex,column,space-evenly);
+            #{$bg}:#ffffff;
+            box-shadow:0px 1px 3px -2px;
+            border-radius: 5px;
+            .barComs{
+                @include taille (100%,15%);
+                @include flexbox (flex,row,start);
+                border-top: solid 4px #00a65a;
+                border-radius: 5px;
+                h3{
+                    #{$famil}: sans-serif;
+                    font-weight: 100;
+                    #{$fz}:2em;
+                    margin-left: 10px;
+                }
+            }
+            .ListComs{
+                @include taille (100%,70%);
+                border-top: solid 2px #c0c0c0;
+                border-bottom: solid 2px #c0c0c0;
+                @include flexbox (flex,column,space-evenly);
+                padding: 10px 0 10px 0;
+                overflow: scroll;
+                scrollbar-width: none;
+                .ContCom{
+                    @include taille (100%,auto);
+                    @include flexbox (flex,row,space-evenly);
+                    align-items: flex-start;
+                    .comPromg{
+                        @include taille (60px,60px);
+                        border-radius: 100px;
+                        overflow: hidden;
+                        img{
+                            #{$w}:100%;
+                        }
+                    }
+                    .contenuComs{
+                        @include taille (80%,auto);
+                        border-radius: 10px;
+                        #{$bg}:#d2d6de;
+                        #{$fz}:1em;
+                        padding: 10px 15px;
+                    }
+
+                }
+            }
+            a{
+                @include taille (30%,15%);
+                @include flexbox (flex,column,center);
+                #{$fz}:1.4em;
+                color: #0072dd;
+                #{$famil}:sans-serif;
+
+            }
+        }
+    }
+
+}

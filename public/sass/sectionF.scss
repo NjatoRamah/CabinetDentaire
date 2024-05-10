@@ -1,0 +1,583 @@
+.sectionF{
+    @include taille (100%,1010px);
+    // #{$bg}: linear-gradient(40deg, rgb(10, 37, 91), rgb(23, 150, 219));
+    background: linear-gradient(120deg, rgb(0, 90, 217), rgb(50, 120, 184), rgb(30, 151, 172));
+    // border-radius: 279px 0 0 0;
+    // box-shadow: -21px -7px 42px -6px rgb(131, 131, 131);
+    position: relative;
+    #{$dp}:flex;
+    @include flexbox(flex,column,end);
+    .titreSoin{
+        @include taille (60%,13%);
+        #{$mg}: 0 0 50px 0;
+        #{$bgcol}:#7ab3cf;
+        #{$b-rad}:10px;
+        @include flexbox (flex,row,center);
+        .iconD{
+            @include taille (9%,60%);
+            #{$bgcol}:#0000004f;
+            #{$b-rad}:100px;
+            #{$dp}:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            i{
+                #{$fz}:40pt;
+                #{$col}:#ffffff;
+            }
+        }
+        h1{
+            #{$col}:#efefef;
+            #{$famil}:sans-serif;
+            #{$fz}:45pt;
+        }
+    }
+    .descSoin{
+        @include taille (80%,50%);
+        #{$mg}: 0 0 45px 0;
+        @include flexbox (flex,row,space-around);
+        align-items: flex-start;
+        position: relative;
+
+        .soinImg{
+            @include taille (35%,100%);
+            background: url(../img/photo2.jpg);
+            @include background (100%);
+            #{$b-rad}:10px;
+            transform: translateY(100%);
+            transition: transform 0.8s ease;
+        }
+        .soinImg.anim{
+            transform: translateY(0%);
+        }
+        .soinDetOne{
+            @include taille (30%,90%);
+            #{$bg}:rgba(255, 247, 247, 0.38);
+            backdrop-filter: blur(5px);
+            #{$b-rad}:15px;
+            @include flexbox (flex,column,flex-start);
+            transform: translateY(100%);
+            transition: transform 1.1s ease;
+            .iconD{
+                @include taille (23%,18%);
+                #{$bgcol}:rgb(50, 75, 209);
+                #{$b-rad}:100px;
+                #{$dp}:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                i{
+                    #{$fz}:40pt;
+                    #{$col}:#ffffff;
+                }
+            }
+            h1{
+                #{$fz}:25pt;
+                #{$w}:35%;
+                #{$col}:rgb(3, 18, 248);
+                font-family: sans-serif;
+                display: flex;
+                align-items: center;
+                margin-top: 10%;
+            }
+            p{
+                width: 80%;
+                text-align: justify;
+                #{$fz}:15pt;
+                #{$col}:white;
+                margin-top: 10%;
+                #{$famil}:sans-serif;
+            }
+
+        }
+        .soinDetOne.anim{
+            transform: translateY(0%);
+        }
+        .soinDetTwo{
+            @include taille (30%,70%);
+            #{$bg}:rgba(255, 247, 247, 0.38);
+            backdrop-filter: blur(5px);
+            #{$b-rad}:15px;
+            @include flexbox (flex,column,flex-start);
+            transform: translateY(100%);
+            transition: transform 1.4s ease;
+            .iconD{
+                @include taille (22%,22%);
+                #{$bgcol}:rgb(50, 75, 209);
+                #{$b-rad}:100px;
+                #{$dp}:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                i{
+                    #{$fz}:35pt;
+                    #{$col}:#ffffff;
+                }
+            }
+            h1{
+                #{$fz}:25pt;
+                #{$w}:88%;
+                #{$col}:rgb(3, 18, 248);
+                font-family: sans-serif;
+                display: flex;
+                align-items: center;
+                margin-top: 10%;
+            }
+            p{
+                width: 80%;
+                text-align: justify;
+                #{$fz}:15pt;
+                #{$col}:white;
+                margin-top: 10%;
+                #{$famil}:sans-serif;
+            }
+
+        }
+        .soinDetTwo.anim{
+            transform: translateY(0%);
+        }
+        .bout{
+            @include position(absolute,78%,69%);
+            @include taille (20%,12%);
+            background-color: #efefef;
+            @include flexbox (flex,row,center);
+            text-decoration: none;
+            #{$b-rad}:10px;
+            #{$fz}:20pt;
+            #{$famil}:sans-serif;
+            color: rgb(93, 139, 217);
+            font-style: italic;
+            font-weight: bolder;
+            transform: scale(0);
+            transition: transform 3s ease;
+            cursor: pointer;
+        }
+        .bout.anim{
+            transform: scale(1.0);
+        }
+    }
+}
+// ecran 1126 ++++++++++++++
+@media screen and (max-width:1126px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            .soinDetOne{
+                .iconD{
+                    @include taille (23%,15%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.5em;
+                    #{$w}:80%;
+                }
+                p{
+                    #{$fz}:1em;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                .iconD{
+                    @include taille (22%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.3em;
+                }
+                p{
+                    #{$fz}:1em;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+        }
+    }
+
+}
+// ecran laptop 1024px+++++++++++++++
+@media screen and (max-width:1024px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            .soinDetOne{
+                .iconD{
+                    @include taille (23%,15%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.5em;
+                    #{$w}:80%;
+                }
+                p{
+                    #{$fz}:1em;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                .iconD{
+                    @include taille (22%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.3em;
+                }
+                p{
+                    #{$fz}:1em;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+        }
+    }
+
+}
+// ecran laptop 1012px+++++++++++++++
+@media screen and (max-width:1013px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            .soinDetOne{
+                .iconD{
+                    @include taille (23%,15%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.5em;
+                    #{$w}:80%;
+                }
+                p{
+                    #{$fz}:0.9em;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                .iconD{
+                    @include taille (22%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.3em;
+                }
+                p{
+                    #{$fz}:0.9em;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+        }
+    }
+
+}
+// ecran 755 +++++++++++++++++++
+@media screen and (max-width:755px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            margin-bottom: 5%;
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            margin-bottom: 20%;
+            .soinDetOne{
+                .iconD{
+                    @include taille (23%,15%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.5em;
+                    #{$w}:80%;
+                }
+                p{
+                    #{$fz}:0.9em;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                .iconD{
+                    @include taille (22%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:2em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.3em;
+                }
+                p{
+                    #{$fz}:0.9em;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+        }
+    }
+
+}
+// ecran 612 +++++++++++++++++++++
+@media screen and (max-width:612px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            margin-bottom:1%;
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            margin-bottom: 5%;
+            @include flexbox (flex,column,space-evenly);
+            @include taille (90%,70%);
+            .soinImg{
+                @include taille (70%,40%);
+                @include background (0%);
+                display: none
+            }
+            .soinDetOne{
+                @include taille (70%,30%);
+
+                .iconD{
+                    @include taille (12%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:1.5em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.4em;
+                    #{$w}:80%;
+                    margin-top: 2%;
+                }
+                p{
+                    #{$fz}:0.8em;
+                    margin-top: 5%;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                @include taille (70%,30%);
+                margin-top: -5%;
+                .iconD{
+                    @include taille (12%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:1.5em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.4em;
+                    #{$w}:80%;
+                    margin-top: 2%;
+                }
+                p{
+                    #{$fz}:0.8em;
+                    margin-top: 5%;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+            .bout{
+                @include position(absolute,90%,auto);
+                @include taille (26%,10%);
+                #{$b-rad}:10px;
+                border: none;
+                #{$fz}:20pt;
+                #{$famil}:sans-serif;
+                color: rgb(93, 139, 217);
+                font-style: italic;
+                font-weight: bolder;
+                transform: scale(0);
+                transition: transform 3s ease;
+            }
+        }
+    }
+
+}
+// ecran 490 +++++++++++++++++++++
+@media screen and (max-width:490px) {
+    .sectionF{
+        @include taille (100%,800px);
+        .titreSoin{
+            @include taille (60%,10%);
+            margin-bottom:1%;
+            .iconD{
+                @include taille (8%,60%);
+                i{
+                    #{$fz}:2em;
+                }
+            }
+            h1{
+                #{$fz}:2.5em;
+            }
+        }
+        .descSoin{
+            margin-bottom: 5%;
+            @include flexbox (flex,column,space-evenly);
+            @include taille (90%,70%);
+            .soinImg{
+                @include taille (70%,40%);
+                @include background (0%);
+                display: none
+            }
+            .soinDetOne{
+                @include taille (70%,30%);
+
+                .iconD{
+                    @include taille (12%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:1.5em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.4em;
+                    #{$w}:80%;
+                    margin-top: 2%;
+                }
+                p{
+                    #{$fz}:0.8em;
+                    margin-top: 5%;
+                }
+
+            }
+            .soinDetOne.anim{
+                transform: translateY(0%);
+            }
+            .soinDetTwo{
+                @include taille (70%,30%);
+                margin-top: -5%;
+                .iconD{
+                    @include taille (12%,20%);
+                    margin-top: 2%;
+                    i{
+                        #{$fz}:1.5em;
+                    }
+                }
+                h1{
+                    #{$fz}:1.4em;
+                    #{$w}:80%;
+                    margin-top: 2%;
+                }
+                p{
+                    #{$fz}:0.8em;
+                    margin-top: 5%;
+                }
+
+            }
+            .soinDetTwo.anim{
+                transform: translateY(0%);
+            }
+            .bout{
+                @include position(absolute,90%,auto);
+                @include taille (30%,9%);
+                #{$b-rad}:10px;
+                border: none;
+                #{$fz}:1.4em;
+                #{$famil}:sans-serif;
+                color: rgb(93, 139, 217);
+                font-style: italic;
+                font-weight: bolder;
+                transform: scale(0);
+                transition: transform 3s ease;
+            }
+        }
+    }
+
+}

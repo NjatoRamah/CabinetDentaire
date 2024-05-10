@@ -1,0 +1,1407 @@
+@font-face {
+  font-family: james;
+  src: url(../font/James\ Stroker.ttf);
+}
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #3c8dbc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headbbb {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .headbbb a {
+  text-decoration: none;
+  font-family: james;
+  font-size: 2.7em;
+  color: antiquewhite;
+  font-weight: bold;
+}
+header .headTwo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .headTwo .Adpro {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+header .headTwo .Adpro img {
+  width: 100%;
+}
+header .headTwo h1 {
+  font-size: 1.2em;
+  color: white;
+  font-family: sans-serif;
+  margin: 0 20px 0 20px;
+}
+header .headTwo a {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+header .fa-house {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  left: 24%;
+}
+
+aside {
+  width: 20%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+aside .adminPrf {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #1c2123;
+}
+aside .adminPrf .admimg {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 100px;
+  box-shadow: 0 0 11px 0 rgb(133, 133, 133);
+}
+aside .adminPrf .admimg img {
+  width: 100%;
+}
+aside .adminPrf h2 {
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+aside .barNav {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+aside .barNav .navy {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+aside .barNav .navy .nav {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+aside .barNav .navy .nav .nav-link {
+  text-decoration: none;
+  color: rgba(225, 225, 225, 0.75);
+  font: 1.2em Raleway;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+aside .barNav .navy .nav:before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background: rgb(0, 89, 255);
+  position: absolute;
+  top: 0;
+  left: -18%;
+  transform: translateY(100%);
+  transition: 0.2s;
+  z-index: 1;
+}
+aside .barNav .navy .nav:hover {
+  background: #1c2123;
+  transition: 0.3s ease;
+}
+aside .barNav .navy .nav:hover .nav-link {
+  color: rgb(255, 255, 255);
+}
+aside .barNav .navy .nav:hover:before {
+  transform: translateX(0%);
+  transition: 0.3s ease;
+}
+
+.contenu {
+  width: 80%;
+  height: auto;
+  background-color: #e9eaef;
+  position: absolute;
+  top: 9.3%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contenu .ensemble {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contenu .ensemble .partiContaint {
+  width: 30%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px -2px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.contenu .ensemble .partiContaint .iconLg {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #00bbdd;
+  border-radius: 100px;
+  box-shadow: 0 0 11px 1px rgb(121, 201, 227);
+}
+.contenu .ensemble .partiContaint .iconLg i {
+  font-size: 3em;
+  color: #ffffff;
+}
+.contenu .ensemble .partiContaint h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.contenu .ensemble .partiContaint .containteBefor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 188, 221, 0.662745098);
+  border-radius: 5px;
+  transform: translateX(-100%);
+  transition: 1s ease;
+}
+.contenu .ensemble .partiContaint .containteBefor button {
+  width: 80px;
+  height: 40px;
+  background: #3e4b5b;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contenu .ensemble .partiContaint .containteBefor button i {
+  margin-right: 5px;
+}
+.contenu .ensemble .partiContaint .containteBefor button:hover {
+  background: #252c35;
+  transition: 0.5s;
+}
+.contenu .ensemble .partiContaint:hover .containteBefor {
+  transform: translateX(0%);
+  transition: 1s ease;
+}
+.contenu .ensemble-two {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenu .ensemble-two .membreListe {
+  width: 47%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px -2px;
+  border-radius: 5px;
+}
+.contenu .ensemble-two .membreListe .barPatient {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-top: solid 4px #00a65a;
+  border-radius: 5px;
+}
+.contenu .ensemble-two .membreListe .barPatient h3 {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  margin-left: 10px;
+}
+.contenu .ensemble-two .membreListe .listPatient {
+  width: 100%;
+  height: 70%;
+  border-top: solid 2px #c0c0c0;
+  border-bottom: solid 2px #c0c0c0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.contenu .ensemble-two .membreListe .listPatient .prioPat {
+  width: 150px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenu .ensemble-two .membreListe .listPatient .prioPat .promg {
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.contenu .ensemble-two .membreListe .listPatient .prioPat h5 {
+  font-size: 1.4em;
+  font-family: sans-serif;
+}
+.contenu .ensemble-two .membreListe .listPatient .prioPat img {
+  width: 100%;
+}
+.contenu .ensemble-two .membreListe a {
+  width: 30%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  color: #0072dd;
+  font-family: sans-serif;
+}
+.contenu .ensemble-two .comsList {
+  width: 47%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px -2px;
+  border-radius: 5px;
+}
+.contenu .ensemble-two .comsList .barComs {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-top: solid 4px #00a65a;
+  border-radius: 5px;
+}
+.contenu .ensemble-two .comsList .barComs h3 {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  margin-left: 10px;
+}
+.contenu .ensemble-two .comsList .ListComs {
+  width: 100%;
+  height: 70%;
+  border-top: solid 2px #c0c0c0;
+  border-bottom: solid 2px #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.contenu .ensemble-two .comsList .ListComs .ContCom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+.contenu .ensemble-two .comsList .ListComs .ContCom .comPromg {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.contenu .ensemble-two .comsList .ListComs .ContCom .comPromg img {
+  width: 100%;
+}
+.contenu .ensemble-two .comsList .ListComs .ContCom .contenuComs {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  background: #d2d6de;
+  font-size: 1em;
+  padding: 10px 15px;
+}
+.contenu .ensemble-two .comsList a {
+  width: 30%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  color: #0072dd;
+  font-family: sans-serif;
+}
+
+.containteServ {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0 30px 0;
+}
+.containteServ .boxErr {
+  width: 400px;
+  height: 80px;
+  background-color: rgba(0, 182, 121, 0.6901960784);
+  position: absolute;
+  top: 1%;
+  left: 32%;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  animation: transy 1s ease;
+}
+.containteServ .boxErr h1 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+@keyframes transy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.containteServ .boxErr.back {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.containteServ .listeSoin {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+  background-color: white;
+  box-shadow: 0px 1px 3px -2px;
+  padding: 10px 0 10px 0;
+  margin-top: -20%;
+  position: relative;
+}
+.containteServ .listeSoin .supprBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(211, 211, 211, 0.6901960784);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.containteServ .listeSoin .supprBox .confirmSuppr {
+  width: 400px;
+  height: 215px;
+  background-color: rgba(28, 197, 81, 0.6901960784);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containteServ .listeSoin .supprBox .confirmSuppr i {
+  font-size: 3em;
+  animation: check 1s ease infinite;
+}
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.containteServ .listeSoin .supprBox .confirmSuppr h1 {
+  font-size: 1.2em;
+  text-decoration: none;
+  text-align: center;
+}
+.containteServ .listeSoin .supprBox .confirmSuppr .ok {
+  width: 100px;
+  height: 42px;
+  background-color: #50846a;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+.containteServ .listeSoin .supprBox .fa-xmark {
+  position: absolute;
+  top: 2%;
+  left: 95%;
+  font-size: 2.5em;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.containteServ .listeSoin .supprBox.actve {
+  display: none;
+}
+.containteServ .listeSoin h1 {
+  font-size: 1.8em;
+  font-family: sans-serif;
+  margin: 30px 0 30px 20px;
+  text-decoration-line: underline;
+}
+.containteServ .listeSoin .table {
+  width: 98%;
+  height: auto;
+  margin: 20px 20px;
+}
+.containteServ .listeSoin .table th {
+  width: 120px;
+  border-bottom: solid 2px rgb(83, 83, 250);
+  text-align: center;
+  color: rgb(87, 86, 86);
+}
+.containteServ .listeSoin .table .tete {
+  height: 50px;
+}
+.containteServ .listeSoin .table td {
+  height: 150px;
+  border-bottom: solid 2px rgb(83, 83, 250);
+  text-align: center;
+  overflow: hidden;
+}
+.containteServ .listeSoin .table td img {
+  width: 50%;
+}
+.containteServ .listeSoin .table td .sectOpt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containteServ .listeSoin .table td .sectOpt .opt {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #00bbdd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 100px;
+}
+.containteServ .listeSoin .table td .sectOpt .opt a {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+}
+.containteServ .listeSoin .table td .sectOpt .ONE {
+  background-color: #00b67a;
+}
+.containteServ .listeSoin .table td .sectOpt .TWO {
+  background-color: red;
+}
+.containteServ .modificationSoin {
+  width: 100%;
+  height: 900px;
+  background-color: #e9eaef;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.containteServ .modificationSoin .ajoutSoin {
+  width: 75%;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px -2px;
+  border-top: solid 3px #00bbdd;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: -24%;
+  background: white;
+}
+.containteServ .modificationSoin .ajoutSoin .barAjout {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+.containteServ .modificationSoin .ajoutSoin .barAjout h1 {
+  font-size: 1.7em;
+  font-family: sans-serif;
+}
+.containteServ .modificationSoin .ajoutSoin .formAjout {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 2px grey;
+}
+.containteServ .modificationSoin .ajoutSoin .formAjout input {
+  width: 90%;
+  height: 10%;
+  outline: none;
+  transition: 0.5s;
+}
+.containteServ .modificationSoin .ajoutSoin .formAjout input:hover {
+  padding-left: 10px;
+  transition: 0.5s ease;
+}
+.containteServ .modificationSoin .ajoutSoin .formAjout button {
+  width: 100px;
+  height: 40px;
+  background: #00bbdd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: blanchedalmond;
+  font-size: 1em;
+  font-weight: bold;
+}
+.containteServ .modificationSoin .modifSoin {
+  width: 75%;
+  height: 800px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px -2px;
+  border-top: solid 3px #00b67a;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: white;
+}
+.containteServ .modificationSoin .modifSoin .barModif {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: start;
+}
+.containteServ .modificationSoin .modifSoin .barModif h1 {
+  font-size: 1.7em;
+  font-family: sans-serif;
+}
+.containteServ .modificationSoin .modifSoin .formModif {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containteServ .modificationSoin .modifSoin .formModif input {
+  width: 90%;
+  height: 10%;
+  outline: none;
+  transition: 0.5s;
+}
+.containteServ .modificationSoin .modifSoin .formModif input:hover {
+  padding-left: 10px;
+  transition: 0.5s ease;
+}
+.containteServ .modificationSoin .modifSoin .formModif button {
+  width: 100px;
+  height: 40px;
+  background: #00b67a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: blanchedalmond;
+  font-size: 1em;
+  font-weight: bold;
+}
+.containteServ .modificationSoin .modifSoin .formModif .placeImg {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+}
+.containteServ .modificationSoin .modifSoin .formModif .placeImg img {
+  width: 80%;
+}
+
+.containtMsg {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containtMsg .contenuMsg {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 3px -2px;
+  background-color: white;
+  margin-top: -20%;
+}
+.containtMsg .contenuMsg .partieMsg {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
+}
+.containtMsg .contenuMsg .partieMsg .barMsg {
+  width: 95%;
+  height: 10%;
+  border-bottom: solid 2px #d2d1d1;
+}
+.containtMsg .contenuMsg .partieMsg .barMsg form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containtMsg .contenuMsg .partieMsg .barMsg form input {
+  width: 60%;
+  height: 52%;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  background: #dad7d7;
+  transition: 1s ease;
+}
+.containtMsg .contenuMsg .partieMsg .barMsg form input:hover {
+  padding-left: 10px;
+  transition: 0.5s ease;
+}
+.containtMsg .contenuMsg .partieMsg .barMsg form button {
+  width: 100px;
+  height: 37px;
+  border-radius: 10px;
+  border: none;
+  background: #3e4b5b;
+  color: blanchedalmond;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.containtMsg .contenuMsg .partieMsg .barList {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.containtMsg .contenuMsg .partieMsg .barList .patientBlock {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0 5px 0;
+}
+.containtMsg .contenuMsg .partieMsg .barList .patientBlock .pdp {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.containtMsg .contenuMsg .partieMsg .barList .patientBlock .pdp img {
+  width: 100%;
+  height: 100%;
+}
+.containtMsg .contenuMsg .partieMsg .barList .patientBlock .nom {
+  text-decoration: none;
+  color: black;
+}
+.containtMsg .contenuMsg .partiEnvoye {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 2px #d2d1d1;
+}
+.containtMsg .contenuMsg .partiEnvoye .afftest {
+  color: #dfdfdf;
+}
+.containtMsg .contenuMsg .partiEnvoye .barProfil {
+  width: 95%;
+  height: 10%;
+  border-bottom: solid 2px #d2d1d1;
+}
+.containtMsg .contenuMsg .partiEnvoye .barProfil .contPdp {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.containtMsg .contenuMsg .partiEnvoye .barProfil .contPdp .pdp {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 100px;
+  margin: 0 15px 0 20px;
+  overflow: hidden;
+}
+.containtMsg .contenuMsg .partiEnvoye .barProfil .contPdp .pdp img {
+  width: 100%;
+  height: 100%;
+}
+.containtMsg .contenuMsg .partiEnvoye .barProfil .contPdp h2 {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: grey;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 7px 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  justify-content: flex-start;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess .imgpro {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: -7%;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess .imgpro img {
+  width: 100%;
+  height: 100%;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess h1 {
+  width: 36%;
+  height: auto;
+  background-color: #c4c4c4;
+  font-size: 1.2em;
+  margin: 3px 10px 3px 5px;
+  padding: 10px 0 10px 10px;
+  border-radius: 0px 29px 24px 19px;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess2 {
+  width: 100%;
+  height: auto;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess2 .imgpro {
+  display: none;
+}
+.containtMsg .contenuMsg .partiEnvoye .barAffiche .boxmess2 h1 {
+  width: 36%;
+  height: auto;
+  background-color: #3c8dbc;
+  color: white;
+  font-size: 1.2em;
+  margin: 3px 10px 3px 5px;
+  padding: 10px 0 10px 10px;
+  border-radius: 24px 24px 0px 19px;
+}
+.containtMsg .contenuMsg .partiEnvoye .barEnvoyeMsg {
+  width: 95%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 2px #d2d1d1;
+}
+.containtMsg .contenuMsg .partiEnvoye .barEnvoyeMsg input {
+  width: 70%;
+  height: 62%;
+  border: none;
+  outline: none;
+  background: #dad7d7;
+  border-radius: 10px;
+}
+.containtMsg .contenuMsg .partiEnvoye .barEnvoyeMsg input:hover {
+  padding-left: 10px;
+  transition: 0.5s ease;
+}
+.containtMsg .contenuMsg .partiEnvoye .barEnvoyeMsg button {
+  width: 100px;
+  height: 37px;
+  border-radius: 10px;
+  border: none;
+  background: #3e4b5b;
+  color: blanchedalmond;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.containtePatient {
+  width: 100%;
+  height: 900px;
+  background: #e9eaef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containtePatient .listPatient {
+  width: 90%;
+  height: auto;
+}
+.containtePatient .listPatient h1 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  margin: 10px 0 10px 20px;
+}
+.containtePatient .listPatient .table {
+  width: 98%;
+  height: auto;
+  margin: 20px 20px;
+}
+.containtePatient .listPatient .table th {
+  width: 120px;
+  border-bottom: solid 2px rgb(83, 83, 250);
+  text-align: center;
+  color: rgb(87, 86, 86);
+}
+.containtePatient .listPatient .table .tete {
+  height: 50px;
+}
+.containtePatient .listPatient .table td {
+  height: 100px;
+  border-bottom: solid 2px rgb(83, 83, 250);
+  text-align: center;
+}
+.containtePatient .listPatient .table td img {
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+}
+.containtePatient .listPatient .table .sectOpt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containtePatient .listPatient .table .sectOpt .opt {
+  width: 60px;
+  height: 60px;
+  background: #00bbdd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 100px;
+}
+.containtePatient .listPatient .table .sectOpt .opt a {
+  font-size: 2.5em;
+  color: white;
+  text-decoration: none;
+}
+
+.zcoms {
+  width: 95%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-top: solid 3px rgb(18, 162, 245);
+}
+
+.boxCms {
+  width: 95%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 2px gray;
+}
+.boxCms .comsImg {
+  width: 40%;
+  height: 90%;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 11px 0 rgb(113, 113, 113);
+}
+.boxCms .comsImg img {
+  width: 100%;
+}
+.boxCms .zoneComs {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 25px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.boxCms .zoneComs .patient {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+.boxCms .zoneComs .patient .pdpPatient {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  box-shadow: 0 0 5px 0;
+  overflow: hidden;
+}
+.boxCms .zoneComs .patient .pdpPatient img {
+  width: 100%;
+  height: 100%;
+}
+.boxCms .zoneComs .patient .content {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+.boxCms .zoneComs .patient .content h1 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  color: rgb(101, 101, 101);
+  margin-bottom: 5px;
+}
+.boxCms .zoneComs .patient .content p {
+  background-color: #1780c3;
+  color: aliceblue;
+  padding: 5px 5px;
+  width: 95%;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 5px;
+  text-align: justify;
+}
+
+.containtCont {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0 30px 0;
+}
+.containtCont .boxContact {
+  width: 95%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 2px gray;
+}
+.containtCont .boxContact .zoneContact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 25px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.containtCont .boxContact .zoneContact .visiteur {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+.containtCont .boxContact .zoneContact .visiteur .contentVist {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+.containtCont .boxContact .zoneContact .visiteur .contentVist h1 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  color: rgb(101, 101, 101);
+  margin-bottom: 5px;
+}
+.containtCont .boxContact .zoneContact .visiteur .contentVist h2 {
+  font-size: 1em;
+  font-family: sans-serif;
+  color: rgb(46, 46, 46);
+  margin-bottom: 10px;
+}
+.containtCont .boxContact .zoneContact .visiteur .contentVist p {
+  background-color: #1780c3;
+  color: aliceblue;
+  padding: 5px 5px;
+  width: 95%;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 5px;
+  text-align: justify;
+}
+.containtCont .boxContact .contactImg {
+  width: 40%;
+  height: 90%;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 11px 0 rgb(113, 113, 113);
+}
+.containtCont .boxContact .contactImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.containteRdv {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containteRdv .boxErr {
+  width: 400px;
+  height: 80px;
+  background-color: rgba(0, 182, 121, 0.6901960784);
+  position: absolute;
+  top: 1%;
+  left: 32%;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  animation: transy 1s ease;
+}
+.containteRdv .boxErr h1 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+@keyframes transy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.containteRdv .boxErr.back {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.containteRdv .titleRdv {
+  width: 95%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-top: solid 3px rgb(18, 162, 245);
+}
+.containteRdv .contenuRdv {
+  width: 95%;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: solid 2px gray;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.containteRdv .contenuRdv .boxRdv {
+  width: 45%;
+  height: 300px;
+  box-shadow: 0 0 11px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 20px;
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv {
+  width: 100%;
+  height: 40%;
+  background-color: rgb(136, 236, 209);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .pdpRdv {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 100px;
+  box-shadow: 0 0 11px 0 rgb(152, 152, 152);
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .pdpRdv img {
+  width: 100%;
+  height: 100%;
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .detailPatient {
+  width: 60%;
+  height: 100%;
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .detailPatient h1 {
+  font-size: 1.4em;
+  color: rgb(59, 59, 59);
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .detailPatient h1 span {
+  font-size: 0.8em;
+}
+.containteRdv .contenuRdv .boxRdv .headboxRdv .detailPatient h2 {
+  font-size: 1.2em;
+  color: rgb(59, 59, 59);
+}
+.containteRdv .contenuRdv .boxRdv .headetail {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+}
+.containteRdv .contenuRdv .boxRdv .headetail h4 {
+  font-size: 1.5em;
+}
+.containteRdv .contenuRdv .boxRdv .headetail h4 span {
+  color: rgb(67, 67, 67);
+  font-style: italic;
+  border-bottom: solid 1px gray;
+}
+.containteRdv .contenuRdv .boxRdv .headetail i {
+  font-size: 4em;
+  color: rgb(4, 240, 161);
+}
+.containteRdv .contenuRdv .boxRdv .headValid {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.containteRdv .contenuRdv .boxRdv .headValid input {
+  width: 30%;
+  height: 50%;
+  margin-right: 8px;
+  margin-left: 2px;
+  border: none;
+  outline: none;
+  border-bottom: solid 2px rgb(145, 143, 143);
+  background: transparent;
+}
+.containteRdv .contenuRdv .boxRdv .headValid input:hover {
+  border-bottom: solid 2px #0098fd;
+  transition: 0.5s;
+}
+.containteRdv .contenuRdv .boxRdv .headValid button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0098fd;
+  font-size: 1em;
+}
+.containteRdv .contenuRdv .boxRdv .headValid button:hover {
+  background-color: #5ab7f4;
+  transition: 0.5s;
+}
+
+.contenuParty {
+  width: 80%;
+  height: auto;
+  background-color: #e9eaef;
+  position: absolute;
+  top: 9.3%;
+  left: 20%;
+}
+
+.patch2 {
+  background-color: rgb(255, 119, 0);
+}
+
+.active {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #222d32;
+}
+body .contenaire {
+  width: 100%;
+  height: 750px;
+  background-color: #222d32;
+  position: absolute;
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

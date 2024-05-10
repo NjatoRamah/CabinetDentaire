@@ -1,0 +1,213 @@
+.sectionTwo{
+    @include tailleSection;
+    height: 900px;
+    @include flexbox(flex,row,center);
+    position: relative;
+    .STwoOne{
+        @include taille (100%,60%);
+        @include flexbox (flex,row,center);
+        overflow: hidden;
+        .descTone{
+            @include taille(34%,100%);
+
+            @include flexbox(flex,column,space-evenly);
+            overflow: hidden;
+            transform: translateX(-150%);
+            transition: transform 1.5s ease;
+            h1{
+                #{$fz}:45pt;
+                #{$w}:70%;
+                #{$col}:rgb(64, 125, 231);
+                font-family: sans-serif;
+                border-radius: 10px;
+                box-shadow: 12px 11px 16px 2px #979797ab;
+            }
+            p{
+                #{$famil}:sans-serif;
+                #{$fz}:14pt;
+                text-align: justify;
+                #{$col}:rgb(93, 139, 217);
+                margin: 5px 49px 7px 52px;
+            }
+            .prodImg{
+                @include taille (90%,auto);
+                background-color:rgba(64, 125, 231, 0.808);
+                border-radius: 10px;
+                overflow: hidden;
+                img{
+                    @include taille (100%,100%);
+                }
+            }
+
+            .descTwo{
+                @include taille (80%,40%);
+                @include flexbox(flex,column,center);
+
+                .descFre{
+                    @include taille(100%,31%);
+                    @include flexbox(flex,row,flex-start);
+                    i{
+                        color:#426dee;
+                        #{$fz}:20pt;
+                        margin-right: 10px;;
+
+                    }
+                    h2{
+                        #{$fz}:12pt;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: rgb(84, 126, 234);
+
+                    }
+                }
+            }
+        }
+        .descTone:nth-of-type(even) {
+            transform: translateX(120%);
+          }
+        .descTone.anim{
+            transform: translateX(0%);
+        }
+
+    }
+    .posImg{
+        @include taille (50%,42%);
+        @include position(absolute,85%,25%);
+        background: url('pulic/image/Marceau_-12.jpg');
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 0;
+        overflow: hidden;
+        img{
+            #{$w}:100%;
+        }
+    }
+}
+//  ecran 1476px +++++++++++
+@media screen and (max-width:1476px) {
+    .sectionTwo{
+        .STwoOne{
+            .descTone{
+
+                h1{
+                    #{$fz}:2.7em;
+                    #{$h}:15%;
+                    align-items: center;
+                text-align: center;
+                }
+            }
+        }
+    }
+
+}
+// ecran laptop 1024px +++++++++++++++++++++++++++
+@media screen and (max-width:1024px) {
+    .sectionTwo{
+        @include tailleSection;
+        height: 600px;
+        .STwoOne{
+            @include taille (100%,65%);
+            @include flexbox (flex,row,center);
+            overflow: hidden;
+            .descTone{
+                h1{
+                    #{$fz}:2.5em;
+                }
+                p{
+                    #{$fz}:0.9em;
+                    margin: 5px 0px 7px 0px;
+                }
+                img{
+                    #{$w}:105%;
+                }
+                .descTwo{
+                    .descFre{
+                        i{
+                            #{$fz}:1em;
+
+                        }
+                        h2{
+                            #{$fz}:0.9em;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+// ecran 1009px+++++++++++
+@media screen and (max-width:1009px) {
+    .sectionTwo{
+        .STwoOne{
+            .descTone{
+
+                h1{
+                    #{$fz}:2em;
+                    #{$h}:15%;
+                    align-items: center;
+                text-align: center;
+                }
+            }
+        }
+    }
+
+}
+// ecran 807px+++++++++++
+@media screen and (max-width:807px) {
+    .sectionTwo{
+        .STwoOne{
+            .descTone{
+                align-items: center;
+                text-align: center;
+                h1{
+                    #{$fz}:1.7em;
+                    #{$h}:15%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .posImg{
+        @include taille (50%,33%);
+        @include position(absolute,85%,25%);
+        z-index: 1;
+        overflow: hidden;
+        img{
+            #{$w}:100%;
+        }
+    }
+}
+// ecran 612+ ++++++++++++++
+@media screen and (max-width:612px) {
+    .sectionTwo{
+        .STwoOne{
+            .descTone{
+                #{$w}:70%;
+                align-items: center;
+                text-align: center;
+                h1{
+                    #{$fz}:1.7em;
+                    #{$h}:15%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &.img{
+                    display: none;
+                }
+            }
+        }
+    }
+    .posImg{
+        @include taille (50%,33%);
+        @include position(absolute,85%,25%);
+        z-index: 1;
+        overflow: hidden;
+        img{
+            #{$w}:100%;
+        }
+    }
+}

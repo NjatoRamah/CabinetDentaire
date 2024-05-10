@@ -1,0 +1,394 @@
+footer{
+    @include taille (100%,350px);
+    background: #000000eb;
+    @include flexbox (flex,column,center);
+
+    .contenaire{
+        @include taille (90%,80%);
+
+        @include flexbox (flex,row,space-evenly);
+        .footOne{
+            @include taille(30%,100%);
+            @include flexbox(flex,column,space-evenly);
+            align-items: baseline;
+            .footLoc{
+                @include taille (100%,50%);
+                @include flexbox(flex,column,center);
+                align-items: baseline;
+                h1{
+                    #{$fz}:20pt;
+                    #{$famil}:sans-serif;
+                    color : #0b5fa5;
+                    margin-bottom: 5%;
+                }
+                .iconFoot{
+                    @include taille(100%,31%);
+                    @include flexbox(flex,row,flex-start);
+                    i{
+                        color: #a5a5a5;
+                        #{$fz}:12pt;
+                        margin-right: 10px;;
+
+                    }
+                    h2{
+                        #{$fz}:12pt;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: rgb(240, 240, 240);
+
+                    }
+                }
+            }
+            .reseau{
+                @include taille (70%,20%);
+                @include flexbox(flex,row,space-between);
+                i{
+                    #{$fz}:20pt;
+                    color: #a5a5a5;
+                    transition: 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                        color: #293247;
+                        #{$fz}:22pt;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+        .footTwo{
+            @include taille(17%,100%);
+            @include flexbox (flex,column, center);
+            align-items: baseline;
+            h1{
+                #{$fz}:20pt;
+                #{$famil}:sans-serif;
+                color : #0b5fa5;
+                margin-bottom: 1%;
+                margin-top: 7%;
+            }
+            .navigateur{
+                @include taille (80%,80%);
+                .navy{
+                    @include taille (100%,100%);
+                    @include flexbox (flex,column, space-evenly);
+                    align-items: baseline;
+                    .nav{
+                        list-style: none;
+                       #{$dp}:flex;
+                        .nav-link{
+                            text-decoration: none;
+                            color: rgb(255, 255, 255);
+                            font-family:sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+        .footFr{
+            @include taille(20%,100%);
+
+            form{
+                @include taille (100%,100%);
+                @include flexbox (flex,column,center);
+                align-items: baseline;
+                margin-top: 10px;
+                h1{
+                    margin-bottom: 5%;
+                    #{$fz}:20pt;
+                    #{$famil}:sans-serif;
+                    color : #0b5fa5;
+                }
+                input{
+                    @include taille (100%,15%);
+                    margin-bottom: 5%;
+                    color: #000000;
+                    font-weight:bold;
+                    font-size: 1em;
+                    background-color: rgb(182, 182, 182);
+                    // background:linear-gradient(rgba(255, 255, 255, 0.145),rgba(255, 255, 255, 0.156));
+                    border: none;
+                    border-bottom: solid 2px rgb(4, 47, 140);
+                    padding-left: 10px;
+
+                }
+                textarea{
+                    width: 100%;
+                    height: 30%;
+                    resize: none;
+                    outline: none;
+                    color: #000000;
+                    // background:linear-gradient(rgba(255, 255, 255, 0.145),rgba(255, 255, 255, 0.156));
+                    background-color: rgb(182, 182, 182);
+                    border: none;
+                    border-bottom: solid 2px rgb(4, 47, 140);
+                }
+                button{
+                    @include taille (30%,15%);
+                    background-color: #ffffff;
+                    color: #000000;
+                    font-weight: bold;
+                    border: none;
+                    #{$b-rad}:10px;
+                    margin-top: 10px;
+                    &:hover{
+                        background-color: #0b5fa5;
+                        color: #ffffff;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+        .newInsert{
+        @include taille (35%,98%);
+        @include flexbox (flex,column,center);
+        .partmg1{
+            @include taille (130px,130px);
+            border-radius: 100px;
+            @include flexbox (flex,row,center);
+            position: relative;
+            overflow: hidden;
+            &::before{
+                content: "";
+                @include taille (150%,150%);
+                background:linear-gradient(blue,white,rgb(44, 147, 238));
+                position: absolute;
+                z-index: 0;
+                animation: rotate 2s linear 0s infinite;
+                @keyframes rotate {
+                    0%{transform: rotate(0deg);}
+                    100%{transform: rotate(360deg);}
+                }
+
+            }
+
+            .partmg2{
+                @include taille (120px,120px);
+                border-radius: 100px;
+                position:absolute;
+                background-color: #141414;
+                img{
+                    width: 100%;
+                    position: absolute;
+                }
+
+            }
+        }
+        .log{
+            font-size: 2em;
+            color: #ffffff;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        }
+    }
+    .contfoot{
+        @include taille (100%,15%);
+        @include flexbox (flex,row,center);
+        align-items: end;
+        @include flexbox(flex,row,center);
+        background-color: #000000;
+        margin-top: 15px;
+        h1{
+            #{$fz}:12pt;
+            #{$famil}:sans-serif;
+            color: aliceblue;
+            a{
+                color : #150df4;
+            }
+        }
+    }
+}
+// ecran 1024px+++++++++++++++++++
+@media screen and (max-width:1024px) {
+
+    footer{
+    @include taille (100%,250px);
+    .contenaire{
+        .footOne{
+            .footLoc{
+                @include taille (100%,50%);
+                @include flexbox(flex,column,center);
+                align-items: baseline;
+                h1{
+                    #{$fz}:1.3em;
+                }
+                .iconFoot{
+                    @include taille(100%,31%);
+                    @include flexbox(flex,row,flex-start);
+                    i{
+                        #{$fz}:1em;
+                    }
+                    h2{
+                        #{$fz}:0.8em;
+
+                    }
+                }
+            }
+            .reseau{
+                i{
+                    #{$fz}:1.2em;
+                }
+            }
+        }
+        .footTwo{
+            h1{
+                #{$fz}:1.3em;
+            }
+            .navigateur{
+                @include taille (80%,80%);
+                .navy{
+                    .nav{
+                        .nav-link{
+                            #{$fz}:0.8em;
+                        }
+                    }
+                }
+            }
+        }
+        .footFr{
+            form{
+
+                h1{
+                    #{$fz}:1.3em;
+
+                }
+            }
+        }
+    }
+    .contfoot{
+        h1{
+            #{$fz}:0.8em;
+        }
+    }
+}
+}
+// ecran 612 +++++++++++++++++++++++
+@media screen and (max-width:612px) {
+
+    footer{
+    @include taille (100%,250px);
+    .contenaire{
+    #{$w}:100%;
+        .footOne{
+            .footLoc{
+                @include taille (100%,50%);
+                @include flexbox(flex,column,center);
+                align-items: baseline;
+                h1{
+                    #{$fz}:1em;
+                }
+                .iconFoot{
+                    @include taille(100%,31%);
+                    @include flexbox(flex,row,flex-start);
+                    i{
+                        #{$fz}:0.8em;
+                    }
+                    h2{
+                        #{$fz}:0.7em;
+
+                    }
+                }
+            }
+            .reseau{
+                i{
+                    #{$fz}:1em;
+                }
+            }
+        }
+        .footTwo{
+            h1{
+                #{$fz}:1.3em;
+            }
+            .navigateur{
+                @include taille (80%,80%);
+                .navy{
+                    .nav{
+                        .nav-link{
+                            #{$fz}:0.8em;
+                        }
+                    }
+                }
+            }
+        }
+        .footFr{
+            form{
+
+                h1{
+                    #{$fz}:1em;
+
+                }
+            }
+        }
+    }
+    .contfoot{
+        h1{
+            #{$fz}:0.5em;
+        }
+    }
+}
+}
+// ecran 490 +++++++++++++++++++++++
+@media screen and (max-width:490px) {
+
+    footer{
+    @include taille (100%,250px);
+    .contenaire{
+    #{$w}:100%;
+        .footOne{
+            .footLoc{
+                @include taille (100%,50%);
+                @include flexbox(flex,column,center);
+                align-items: baseline;
+                h1{
+                    #{$fz}:1em;
+                }
+                .iconFoot{
+                    @include taille(100%,31%);
+                    @include flexbox(flex,row,flex-start);
+                    i{
+                        #{$fz}:0.8em;
+                    }
+                    h2{
+                        #{$fz}:0.7em;
+
+                    }
+                }
+            }
+            .reseau{
+                i{
+                    #{$fz}:1em;
+                }
+            }
+        }
+        .footTwo{
+            h1{
+                #{$fz}:1.3em;
+            }
+            .navigateur{
+                @include taille (80%,80%);
+                .navy{
+                    .nav{
+                        .nav-link{
+                            #{$fz}:0.8em;
+                        }
+                    }
+                }
+            }
+        }
+        .footFr{
+            display: none;
+            form{
+
+                h1{
+                    #{$fz}:1em;
+
+                }
+            }
+        }
+    }
+    .contfoot{
+        h1{
+            #{$fz}:0.5em;
+        }
+    }
+}
+}
